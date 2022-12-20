@@ -1,1 +1,19 @@
 
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+
+api:
+  url: http://www.seoulmetro.co.kr/kr/getRouteSearchResult.do
+
+subway:
+  filepath: C:\develop\commuting\sri_subway_all_v4.csv
+  dupl:
+    filepath: C:\develop\commuting\depl_all_subway.csv
+  out:
+    filepath: C:\develop\commuting\metro_all_data_%s.csv
+  miss:
+    filepath: C:\develop\commuting\metro_miss_data_%s.csv
