@@ -74,7 +74,7 @@ public class CommutingCrwApplication implements CommandLineRunner {
 					.build();
 			list.add(vo);
 		});
-		for (int i = 0; i < 3; i++) {
+		for (int i = 2; i < 4; i++) {
 			List<ResultVO> resultList = new ArrayList<>();
 			MetroVO startMetroVO = list.get(i);
 			for (MetroVO endMetroVO : list) {

@@ -17,3 +17,23 @@ subway:
     filepath: C:\develop\commuting\metro_all_data_%s.csv
   miss:
     filepath: C:\develop\commuting\metro_miss_data_%s.csv
+
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: mac
+
+api:
+  url: http://www.seoulmetro.co.kr/kr/getRouteSearchResult.do
+
+subway:
+  filepath: /Users/wandol/Downloads/temp/sri_subway_all_v4.csv
+  dupl:
+    filepath: /Users/wandol/Downloads/temp/depl_all_subway.csv
+  out:
+    filepath: /Users/wandol/Downloads/temp/metro_all_data_%s.csv
+  miss:
+    filepath: /Users/wandol/Downloads/temp/metro_miss_data_%s.csv
