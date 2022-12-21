@@ -6,6 +6,7 @@ import kr.co.saramin.lab.commutingcrw.vo.ResultVO;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpEntity;
@@ -23,10 +24,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Component
 @Slf4j
@@ -110,45 +109,49 @@ public class SubwayService {
     }
 
     public String gettransNode(String node, Elements els) {
-        LinkedList<String> set  = new LinkedList<>();
-        if(els.size() > 0){
-            set.add(node);
+        LinkedHashSet<String> set = new LinkedHashSet<>();
+        set.add(node);
+        for (Element element : els) {
+            String s = element.getElementsByTag("afterLine").text();
+            String s1 = "인천선".equals(s) ? "인천1호선" : s;
+            set.add(s1);
         }
-        els.forEach(element -> {
-            set.add(element.getElementsByTag("afterLine").text());
-        });
+
         return String.join(",",set).replaceAll(",",",subway_transfer,");
     }
 
     public String gettransCd(Elements els) {
-        LinkedList<String> set  = new LinkedList<>();
-        els.forEach(element -> {
-            if("tpath".equals(element.getElementsByTag("pathType").text())){
-                set.add(Global.ALL_MAP.getOrDefault(element.getElementsByTag("endStationCode").text(),null));
+        StringJoiner joiner = new StringJoiner(",");
+        for (Element element : els) {
+            if ("tpath".equals(element.getElementsByTag("pathType").text())) {
+                String s = element.getElementsByTag("endStationCode").text();
+                String orDefault = Global.ALL_MAP.getOrDefault(s, null);
+                joiner.add(orDefault);
             }
-        });
-        return String.join(",",set);
+        }
+        return joiner.toString();
     }
 
     public String gettrans(Elements els) {
-        LinkedList<String> set  = new LinkedList<>();
-        els.forEach(element -> {
-            if("tpath".equals(element.getElementsByTag("pathType").text())){
-                set.add(element.getElementsByTag("endStationName").text());
+        StringJoiner joiner = new StringJoiner(",");
+        for (Element element : els) {
+            if ("tpath".equals(element.getElementsByTag("pathType").text())) {
+                String endStationName = element.getElementsByTag("endStationName").text();
+                joiner.add(endStationName);
             }
-        });
-        return String.join(",",set);
+        }
+        return joiner.toString();
     }
 
     public String getPathCd(String sri_cd, Elements els) {
         LinkedHashSet<String> set  = new LinkedHashSet<>();
         //	초기 역 우선 add
         set.add(sri_cd);
-        els.forEach(element -> {
-            if("spath".equals(element.getElementsByTag("pathType").text())){
-                set.add(Global.SRI_CODE_MAP.getOrDefault(element.getElementsByTag("endStationCode").text(),null));
+        for (Element element : els) {
+            if ("spath".equals(element.getElementsByTag("pathType").text())) {
+                set.add(Global.SRI_CODE_MAP.getOrDefault(element.getElementsByTag("endStationCode").text(), null));
             }
-        });
+        }
         return String.join(",",set);
     }
 
@@ -156,11 +159,11 @@ public class SubwayService {
         LinkedHashSet<String> set  = new LinkedHashSet<>();
         //	초기 역 우선 add
         set.add(subNm);
-        els.forEach(element -> {
-            if("spath".equals(element.getElementsByTag("pathType").text())){
+        for (Element element : els) {
+            if ("spath".equals(element.getElementsByTag("pathType").text())) {
                 set.add(element.getElementsByTag("endStationName").text());
             }
-        });
+        }
         return String.join(",",set);
     }
 }
