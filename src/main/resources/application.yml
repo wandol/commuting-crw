@@ -17,7 +17,9 @@ subway:
     filepath: C:\develop\commuting\metro_all_data_%s.csv
   miss:
     filepath: C:\develop\commuting\metro_miss_data_%s.csv
-
+metro:
+  data:
+    filepath: C:\develop\commuting\metro_data.csv
 
 ---
 
@@ -28,6 +30,8 @@ spring:
 
 api:
   url: http://www.seoulmetro.co.kr/kr/getRouteSearchResult.do
+  kako:
+    url: https://dapi.kakao.com/v2/local/search/keyword
 
 subway:
   filepath: /Users/wandol/Downloads/temp/sri_subway_all_v4.csv
@@ -37,3 +41,11 @@ subway:
     filepath: /Users/wandol/Downloads/temp/metro_all_data_%s.csv
   miss:
     filepath: /Users/wandol/Downloads/temp/metro_miss_data_%s.csv
+  hap:
+    filepath: /Users/wandol/Downloads/metro20221224/out/
+  hap-to:
+    filepath: /Users/wandol/Downloads/metro20221224/tobe/
+
+metro:
+  data:
+    filepath: /Users/wandol/Downloads/temp/metro_data.csv

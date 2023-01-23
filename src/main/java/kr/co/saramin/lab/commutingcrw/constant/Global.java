@@ -6,5 +6,4 @@ public class Global {
 
     public final static ConcurrentHashMap<String,String> LINE_MAP = new ConcurrentHashMap<>();
 
-    public final static ConcurrentHashMap<String,String> ALL_MAP = new ConcurrentHashMap<>();
 }
