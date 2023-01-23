@@ -125,7 +125,7 @@ public class SubwayService {
         for (Element element : els) {
             if ("tpath".equals(element.getElementsByTag("pathType").text())) {
                 String s = element.getElementsByTag("endStationCode").text();
-                String orDefault = Global.ALL_MAP.getOrDefault(s, null);
+                String orDefault = Global.SRI_CODE_MAP.getOrDefault(s, null);
                 joiner.add(orDefault);
             }
         }
