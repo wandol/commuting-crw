@@ -50,7 +50,7 @@ public class SubwayService {
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
         MultiValueMap<String, String> map= new LinkedMultiValueMap<>();
         map.add("departureId", startMetroVO.getMetro_code());
-        map.add("arrivalId", "1702");
+        map.add("arrivalId", endMetroVO.getMetro_code());
 //        map.add("arrivalId", endMetroVO.getMetro_code());
         map.add("sKind","1");
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
@@ -191,9 +191,9 @@ public class SubwayService {
                         .otherCd(s[5])
                         .build()).collect(Collectors.toList());
 
-        for (int i = 2; i < 3; i++) {
+//        for (int i = 2; i < 3; i++) {
             List<ResultVO> resultList = new ArrayList<>();
-            MetroVO startMetroVO = list.get(i);
+            MetroVO startMetroVO = list.stream().filter(metroVO -> "100150".equals(metroVO.getSri_code())).findAny().orElse(null);
             for (MetroVO endMetroVO : list) {
                 if(!startMetroVO.getMetro_code().equals(endMetroVO.getMetro_code())){
                     Thread.sleep(100);
@@ -257,7 +257,7 @@ public class SubwayService {
             filewrite(resultList,startMetroVO.getSubNm());
             filewriteMiss(miss,startMetroVO.getSubNm());
         }
-    }
+//    }
 
     /**
      *  지하철 좌표 데이터 기반 데이터 생성

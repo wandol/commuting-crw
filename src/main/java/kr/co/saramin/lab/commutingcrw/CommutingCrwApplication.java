@@ -27,41 +27,41 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class CommutingCrwApplication implements CommandLineRunner {
 
-	private final Environment env;
+    private final Environment env;
 
-	private final SubwayService subwayService;
+    private final SubwayService subwayService;
 
-	public static void main(String[] args) {
-		SpringApplication.run(CommutingCrwApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CommutingCrwApplication.class, args);
+    }
 
-	/**
-	 * 	초기 매핑 사전 load
-	 */
-	@SneakyThrows
-	@PostConstruct
-	public  void init(){
-		//  서울메트로 지하철코드 | 사람인 지하철코드
-		Path path = Paths.get(Objects.requireNonNull(env.getProperty("subway.filepath")));
-		Files.readAllLines(path).forEach(s -> {
-			String[] cont = s.split("\\|",6);
-			Global.SRI_CODE_MAP.put(cont[4],cont[1]);
-		});
+    /**
+     * 초기 매핑 사전 load
+     */
+    @SneakyThrows
+    @PostConstruct
+    public void init() {
+        //  서울메트로 지하철코드 | 사람인 지하철코드
+        Path path = Paths.get(Objects.requireNonNull(env.getProperty("subway.filepath")));
+        Files.readAllLines(path).forEach(s -> {
+            String[] cont = s.split("\\|", 6);
+            Global.SRI_CODE_MAP.put(cont[4], cont[1]);
+        });
 
-		//  서울메트로 지하철코드 | 호선명
-		Files.readAllLines(path).forEach(s -> {
-			String[] cont = s.split("\\|",6);
-			Global.LINE_MAP.put(cont[4],cont[3]);
-		});
-	}
+        //  서울메트로 지하철코드 | 호선명
+        Files.readAllLines(path).forEach(s -> {
+            String[] cont = s.split("\\|", 6);
+            Global.LINE_MAP.put(cont[4], cont[3]);
+        });
+    }
 
-	@Override
-	public void run(String... args) throws Exception {
+    @Override
+    public void run(String... args) throws Exception {
 //		subwayService.testCheck();
-//		subwayService.getCommutingAll();
-		//	metro_data 볼륨 생성
-//		subwayService.makeMetroData();
-		subwayService.makeHapSubdata();
-		System.exit(0);
-	}
+		subwayService.getCommutingAll();
+//        	metro_data 볼륨 생성
+//        subwayService.makeMetroData();
+//		subwayService.makeHapSubdata();
+        System.exit(0);
+    }
 }
