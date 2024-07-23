@@ -8,6 +8,8 @@ spring:
 
 api:
   url: http://www.seoulmetro.co.kr/kr/getRouteSearchResult.do
+  kako-url: https://dapi.kakao.com/v2/local/search/keyword
+  metro-code-url: https://data.seoul.go.kr/dataList/dataView.do?onepagerow=1000&srvType=S&infId=OA-121&serviceKind=1&pageNo=1&gridTotalCnt=785&ssUserId=SAMPLE_VIEW&strWhere=&strOrderby=&filterCol=%ED%95%84%ED%84%B0%EC%84%A0%ED%83%9D&txtFilter=
 
 subway:
   filepath: C:\develop\commuting\sri_subway_all_v4.csv
@@ -20,6 +22,8 @@ subway:
 metro:
   data:
     filepath: C:\develop\commuting\metro_data.csv
+  merge:
+    filepath: C:\develop\commuting\metro_merge_data.csv
 
 ---
 
@@ -30,8 +34,8 @@ spring:
 
 api:
   url: http://www.seoulmetro.co.kr/kr/getRouteSearchResult.do
-  kako:
-    url: https://dapi.kakao.com/v2/local/search/keyword
+  kako-url: https://dapi.kakao.com/v2/local/search/keyword
+  metro-code-url: https://data.seoul.go.kr/dataList/dataView.do?onepagerow=1000&srvType=S&infId=OA-121&serviceKind=1&pageNo=1&gridTotalCnt=785&ssUserId=SAMPLE_VIEW&strWhere=&strOrderby=&filterCol=%ED%95%84%ED%84%B0%EC%84%A0%ED%83%9D&txtFilter=
 
 subway:
   filepath: /Users/wandol/Downloads/temp/sri_subway_all_v4.csv

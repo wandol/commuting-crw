@@ -55,9 +55,27 @@ public class CommutingCrwApplication implements CommandLineRunner {
         });
     }
 
+    // TODO: 2024-04-08 상세한 절차 설명 필요.
+
+    /**
+     *
+     * //   전체 지하철역 정보 ( 통근 경로 구하는 지하철 코드값이 포함되어 있음. )
+     * @param args incoming main method arguments
+     * @throws Exception
+     */
     @Override
     public void run(String... args) throws Exception {
+        // TODO: 2024-07-23
+        //  1. 지하철정보 관련 파일을 하나로 통합.
+        //      vdi 내부망에서 기반이 되는 중복제거된 지하철역 정보파일(사람인코드도 포함된)에 통근경로를 구할때 필요한 코드를 매핑하여 파일을 하나로 관리.
+        //  2.  통합 파일로 통근 경로 생성
+        //      신규로 추가되는 역들 전체 매핑 -> fgf 파일로 생성
+
+        //  통근 경로 api 테스트
 //		subwayService.testCheck();
+        //  지하철 정보 관련 파일 머지
+        //  vdi에서 가져온 사람인 코드와 좌표 정보가 있는 지하철 파일 필요
+//        subwayService.mergeMetroData();
 		subwayService.getCommutingAll();
 //        	metro_data 볼륨 생성
 //        subwayService.makeMetroData();

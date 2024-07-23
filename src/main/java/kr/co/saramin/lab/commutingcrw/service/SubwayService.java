@@ -8,6 +8,7 @@ import kr.co.saramin.lab.commutingcrw.constant.Global;
 import kr.co.saramin.lab.commutingcrw.vo.MetroDataVO;
 import kr.co.saramin.lab.commutingcrw.vo.MetroVO;
 import kr.co.saramin.lab.commutingcrw.vo.ResultVO;
+import kr.co.saramin.lab.commutingcrw.vo.SeoulMetroVO;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -31,9 +32,12 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import kr.co.saramin.lab.commutingcrw.constant.Utils;
 
 @Component
 @Slf4j
@@ -41,17 +45,17 @@ import java.util.stream.Stream;
 public class SubwayService {
 
     private final Environment env;
+    private final Utils utils;
 
     @SneakyThrows
-    public ResponseEntity<String> getStringResponseEntity(MetroVO startMetroVO, MetroVO endMetroVO) {
+    public ResponseEntity<String> getStringResponseEntity(MetroDataVO startMetroVO, MetroDataVO endMetroVO) {
         URL url = new URL(Objects.requireNonNull(env.getProperty("api.url")));
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
         MultiValueMap<String, String> map= new LinkedMultiValueMap<>();
-        map.add("departureId", startMetroVO.getMetro_code());
-        map.add("arrivalId", endMetroVO.getMetro_code());
-//        map.add("arrivalId", endMetroVO.getMetro_code());
+        map.add("departureId", startMetroVO.getSt_id());
+        map.add("arrivalId", endMetroVO.getSt_id());
         map.add("sKind","1");
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
         return restTemplate.postForEntity(
@@ -159,18 +163,10 @@ public class SubwayService {
         for (Element element : els) {
             if ("spath".equals(element.getElementsByTag("pathType").text())) {
                 set.add(Global.SRI_CODE_MAP.getOrDefault(element.getElementsByTag("endStationCode").text(), null));
-            }
-        }
-        return String.join(",",set);
-    }
-
-    public String getPath(String subNm, Elements els) {
-        LinkedHashSet<String> set  = new LinkedHashSet<>();
-        //	초기 역 우선 add
-        set.add(subNm);
-        for (Element element : els) {
-            if ("spath".equals(element.getElementsByTag("pathType").text())) {
-                set.add(element.getElementsByTag("endStationName").text());
+                if(Global.SRI_CODE_MAP.getOrDefault(element.getElementsByTag("endStationCode").text(), null) == null){
+                    log.info(element.getElementsByTag("endStationCode").text());
+                    log.info("");
+                }
             }
         }
         return String.join(",",set);
@@ -179,23 +175,16 @@ public class SubwayService {
     @SneakyThrows
     public void getCommutingAll() {
         List<ResultVO> miss = new ArrayList<>();
+
         //  중복제거된 지하철역 데이터 파일 읽기
-        List<MetroVO> list = Files.readAllLines(Paths.get(Objects.requireNonNull(env.getProperty("subway.dupl.filepath")))).stream()
-                .map(s -> s.split("\\|", 6))
-                .map(s -> MetroVO.builder()
-                        .code(s[0])
-                        .sri_code(s[1])
-                        .subNm(s[2])
-                        .line(s[3])
-                        .metro_code(s[4])
-                        .otherCd(s[5])
-                        .build()).collect(Collectors.toList());
+        List<MetroDataVO> metroDataVOList = getSriMetroData();
 
 //        for (int i = 2; i < 3; i++) {
-            List<ResultVO> resultList = new ArrayList<>();
-            MetroVO startMetroVO = list.stream().filter(metroVO -> "100150".equals(metroVO.getSri_code())).findAny().orElse(null);
-            for (MetroVO endMetroVO : list) {
-                if(!startMetroVO.getMetro_code().equals(endMetroVO.getMetro_code())){
+        List<ResultVO> resultList = new ArrayList<>();
+        MetroDataVO startMetroVO = metroDataVOList.stream().filter(metroVO -> "101101".equals(metroVO.getSri_subway_cd())).findAny().orElse(null);
+        if(startMetroVO != null ){
+            for (MetroDataVO endMetroVO : metroDataVOList) {
+                if(!startMetroVO.getSt_id().equals(endMetroVO.getSt_id())){
                     Thread.sleep(100);
                     try {
                         ResponseEntity<String> response = getStringResponseEntity(startMetroVO, endMetroVO);
@@ -209,11 +198,11 @@ public class SubwayService {
                                 String endCode = Global.SRI_CODE_MAP.get(Objects.requireNonNull(doc.getElementsByTag("endStationCode").first()).text());
                                 ResultVO vo = ResultVO.builder()
                                         .startNodeNmSearch(stNodeNm)
-                                        .startStNmSearch(startMetroVO.getSubNm())
+                                        .startStNmSearch(startMetroVO.getSt_nm())
                                         .endCodeSearch(endCode)
-                                        .startStNm(startMetroVO.getSubNm())
-                                        .endStNm(endMetroVO.getSubNm())
-                                        .pathsNm(getPath(startMetroVO.getSubNm(), els))
+                                        .startStNm(startMetroVO.getSt_nm())
+                                        .endStNm(endMetroVO.getSt_nm())
+                                        .pathsNm(getPath(startMetroVO.getSt_nm(), els))
                                         .pathsCd(getPathCd(stSriCd, els))
                                         .totalCost(doc.getElementsByTag("totalTime").text())
                                         .transferNode(gettransNode(stNodeNm, tels))
@@ -223,129 +212,52 @@ public class SubwayService {
                                 resultList.add(vo);
                             }else{
                                 ResultVO vo = ResultVO.builder()
-                                        .startNodeNmSearch(startMetroVO.getLine())
-                                        .startStNmSearch(startMetroVO.getSubNm())
-                                        .endCodeSearch(endMetroVO.getSri_code())
-                                        .startStNm(startMetroVO.getSubNm())
-                                        .endStNm(endMetroVO.getSubNm())
+                                        .startNodeNmSearch(startMetroVO.getNode_nm())
+                                        .startStNmSearch(startMetroVO.getSt_nm())
+                                        .endCodeSearch(endMetroVO.getSri_subway_cd())
+                                        .startStNm(startMetroVO.getSt_nm())
+                                        .endStNm(endMetroVO.getSt_nm())
                                         .build();
                                 miss.add(vo);
                             }
                         }else{
                             ResultVO vo = ResultVO.builder()
-                                    .startNodeNmSearch(startMetroVO.getLine())
-                                    .startStNmSearch(startMetroVO.getSubNm())
-                                    .endCodeSearch(endMetroVO.getSri_code())
-                                    .startStNm(startMetroVO.getSubNm())
-                                    .endStNm(endMetroVO.getSubNm())
+                                    .startNodeNmSearch(startMetroVO.getNode_nm())
+                                    .startStNmSearch(startMetroVO.getSt_nm())
+                                    .endCodeSearch(endMetroVO.getSri_subway_cd())
+                                    .startStNm(startMetroVO.getSt_nm())
+                                    .endStNm(endMetroVO.getSt_nm())
                                     .build();
                             miss.add(vo);
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
                         ResultVO vo = ResultVO.builder()
-                                .startNodeNmSearch(startMetroVO.getLine())
-                                .startStNmSearch(startMetroVO.getSubNm())
-                                .endCodeSearch(endMetroVO.getSri_code())
-                                .startStNm(startMetroVO.getSubNm())
-                                .endStNm(endMetroVO.getSubNm())
+                                .startNodeNmSearch(startMetroVO.getNode_nm())
+                                .startStNmSearch(startMetroVO.getSt_nm())
+                                .endCodeSearch(endMetroVO.getSri_subway_cd())
+                                .startStNm(startMetroVO.getSt_nm())
+                                .endStNm(endMetroVO.getSt_nm())
                                 .build();
                         miss.add(vo);
                     }
                 }
             }
-            filewrite(resultList,startMetroVO.getSubNm());
-            filewriteMiss(miss,startMetroVO.getSubNm());
         }
-//    }
+        filewrite(resultList,startMetroVO.getSt_nm());
+        filewriteMiss(miss,startMetroVO.getSt_nm());
+    }
 
-    /**
-     *  지하철 좌표 데이터 기반 데이터 생성
-     */
-    @SneakyThrows
-    public void makeMetroData() {
-        List<MetroVO> list = Files.readAllLines(Paths.get(Objects.requireNonNull(env.getProperty("subway.dupl.filepath")))).stream()
-                .map(s -> s.split("\\|", 6))
-                .map(s -> MetroVO.builder()
-                        .code(s[0])
-                        .sri_code(s[1])
-                        .subNm(s[2])
-                        .line(s[3])
-                        .metro_code(s[4])
-                        .otherCd(s[5])
-                        .build()).collect(Collectors.toList());
-        List<MetroDataVO> resultList = new ArrayList<>();
-        for (MetroVO metroVO : list) {
-            ResponseEntity<String> response = getStringResponseEntity(metroVO, metroVO);
-            if (response.getBody() != null && response.getStatusCodeValue() == 200) {
-                Document doc = Jsoup.parse(Objects.requireNonNull(response.getBody()));
-                Element latitude = Objects.requireNonNull(doc.getElementsByTag("startLatitude").first());
-                Element longitude = Objects.requireNonNull(doc.getElementsByTag("startLongitude").first());
-                String latitudeS = latitude.text();
-                String longitudeS = longitude.text();
-                if("".equals(latitude.text()) && "".equals(longitude.text())) {
-                    Map<String,String> tempMap = getKakaoGps(metroVO.getSubNm() + "역");
-                    latitudeS = tempMap.get("latitude");
-                    longitudeS = tempMap.get("longitude");
-                    log.info("not gps data : {}", metroVO.getSubNm());
-                    log.info("kako find :: {}",tempMap);
-                }
-                MetroDataVO vo = MetroDataVO.builder()
-                        .node_id(metroVO.getLine())
-                        .node_nm(metroVO.getLine())
-                        .st_id(metroVO.getCode())
-                        .st_nm(metroVO.getSubNm())
-                        .gps_x(String.format("%.5f",Double.valueOf(longitudeS.equals("")?"0":longitudeS)).replace(".",""))
-                        .gps_y(String.format("%.5f",Double.valueOf(latitudeS.equals("")?"0":latitudeS)).replace(".",""))
-                        .gps_x_real(longitudeS)
-                        .gps_y_real(latitudeS)
-                        .trans_type("subway")
-                        .area_nm("metro")
-                        .sri_subway_cd(metroVO.getSri_code())
-                        .build();
-                resultList.add(vo);
+    public String getPath(String subNm, Elements els) {
+        LinkedHashSet<String> set  = new LinkedHashSet<>();
+        //	초기 역 우선 add
+        set.add(subNm);
+        for (Element element : els) {
+            if ("spath".equals(element.getElementsByTag("pathType").text())) {
+                set.add(element.getElementsByTag("endStationName").text());
             }
         }
-        Path path = Paths.get(Objects.requireNonNull(env.getProperty("metro.data.filepath")));
-        try(BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8)){
-            for (MetroDataVO resultVO : resultList) {
-                writer.append(resultVO.getNode_id()).append("|");
-                writer.append(resultVO.getNode_nm()).append("|");
-                writer.append(resultVO.getSt_id()).append("|");
-                writer.append(resultVO.getSt_nm()).append("|");
-                writer.append(resultVO.getGps_x()).append("|");
-                writer.append(resultVO.getGps_y()).append("|");
-                writer.append(resultVO.getGps_x_real()).append("|");
-                writer.append(resultVO.getGps_y_real()).append("|");
-                writer.append(resultVO.getTrans_type()).append("|");
-                writer.append(resultVO.getArea_nm()).append("|");
-                writer.append(resultVO.getSri_subway_cd()).append("|");
-                writer.newLine();
-//                writer.append("<__node_id__>").append(resultVO.getNode_id());
-//                writer.newLine();
-//                writer.append("<__node_nm__>").append(resultVO.getNode_nm());
-//                writer.newLine();
-//                writer.append("<__st_id__>").append(resultVO.getSt_id());
-//                writer.newLine();
-//                writer.append("<__st_nm__>").append(resultVO.getSt_nm());
-//                writer.newLine();
-//                writer.append("<__gps_x__>").append(resultVO.getGps_x());
-//                writer.newLine();
-//                writer.append("<__gps_y__>").append(resultVO.getGps_y());
-//                writer.newLine();
-//                writer.append("<__gps_x_real__>").append(resultVO.getGps_x_real());
-//                writer.newLine();
-//                writer.append("<__gps_y_real__>").append(resultVO.getGps_y_real());
-//                writer.newLine();
-//                writer.append("<__trans_type__>").append(resultVO.getTrans_type());
-//                writer.newLine();
-//                writer.append("<__area_nm__>").append(resultVO.getArea_nm());
-//                writer.newLine();
-//                writer.append("<__sri_subway_cd__>").append(resultVO.getSri_subway_cd());
-//                writer.newLine();
-            }
-        }
-
+        return String.join(",",set);
     }
 
     @SneakyThrows
@@ -417,5 +329,94 @@ public class SubwayService {
                 writer.newLine();
             }
         }
+    }
+
+    /**
+     *  내부망에서의 지하철 데이터 와 외부망에서의 지하철데이터 통합
+     *  - 내부망 지하철 데이터 : metro_data.csv ( 지하철 호선,역명 및 좌표, 사람인 지하철코드 )
+     *  - 외부망 지하철 데이터 : API를 활용, 통근경로를 구할때 필요한 지하철 코드값.
+     *  병합하여 metro_merge_data.csv 파일 생성.
+     */
+    @SneakyThrows
+    public void mergeMetroData() {
+
+        //  내부 데이터
+        List<MetroDataVO> metroDataVOList = getSriMetroData();
+        //  외부 데이터
+        List<SeoulMetroVO.Station> seoulMetroVOList = getSeoulMetroData();
+
+        List<MetroDataVO> m = mappingCode(metroDataVOList, seoulMetroVOList);
+
+        String mergeDataPath = env.getProperty("metro.merge.filepath");
+
+        utils.fileWrite(mergeDataPath, m);
+    }
+
+    /**
+     *  사람인 내부 데이터 좌표 포함.
+     * @return
+     */
+    @SneakyThrows
+    private List<MetroDataVO> getSriMetroData() {
+        String metroInFile = env.getProperty("metro.data.filepath");
+        return Files.readAllLines(Paths.get(metroInFile)).stream()
+                .map(s -> s.split("\\|", 12))
+                .map(ss -> MetroDataVO.builder()
+                        .node_id(ss[0])
+                        .node_nm(ss[1])
+                        .st_id(ss[2])
+                        .st_nm(ss[3])
+                        .gps_x(ss[4])
+                        .gps_y(ss[5])
+                        .gps_x_real(ss[6])
+                        .gps_y_real(ss[7])
+                        .trans_type(ss[8])
+                        .area_nm(ss[9])
+                        .sri_subway_cd(ss[10])
+                        .build())
+                .collect(Collectors.toList());
+    }
+
+    /**
+     *  내외부 데이터 머지.
+     *  1. 지하철 역명 비교,
+     *  2.  호선명 포함여부 체크
+     * @param metroDataVOList
+     * @param seoulMetroVOList
+     * @return
+     */
+    private List<MetroDataVO> mappingCode(List<MetroDataVO> metroDataVOList, List<SeoulMetroVO.Station> seoulMetroVOList) {
+        if(Objects.nonNull(metroDataVOList) && Objects.nonNull(seoulMetroVOList)){
+
+            Map<String, List<SeoulMetroVO.Station>> map = seoulMetroVOList.stream()
+                    .filter(Objects::nonNull)
+                    .filter(station -> station.getStationNm() != null)
+                    .collect(Collectors.groupingBy(SeoulMetroVO.Station::getStationNm));
+
+            for (MetroDataVO metroDataVO : metroDataVOList) {
+                String key = utils.checkStNm(metroDataVO.getSt_nm());
+
+                if(map.get(key) != null){
+                    metroDataVO.setSt_id(map.get(key).get(0).getStationCd());
+                }else{
+                    metroDataVO.setSt_id("reject");
+                    System.out.println("?? " + metroDataVO);
+                }
+            }
+        }
+        return metroDataVOList;
+    }
+
+    /**
+     *  외부 지하철 데이터 select
+     * @return
+     */
+    @SneakyThrows
+    private List<SeoulMetroVO.Station> getSeoulMetroData() {
+        URL url = new URL(Objects.requireNonNull(env.getProperty("api.metro-code-url")));
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity(url.toURI(), String.class);
+        SeoulMetroVO response = new Gson().fromJson(responseEntity.getBody(), SeoulMetroVO.class);
+        return Objects.nonNull(response.getList()) ? response.getList() : null;
     }
 }
