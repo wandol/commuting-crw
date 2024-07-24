@@ -24,7 +24,8 @@ metro:
     filepath: C:\develop\commuting\metro_data.csv
   merge:
     filepath: C:\develop\commuting\metro_merge_data.csv
-
+  all:
+    filepath: /Users/wandol/Downloads/temp/metro_all_data.csv
 ---
 
 spring:
@@ -53,3 +54,7 @@ subway:
 metro:
   data:
     filepath: /Users/wandol/Downloads/temp/metro_data.csv
+  merge:
+    filepath: /Users/wandol/Downloads/temp/metro_merge_data.csv
+  all:
+    filepath: /Users/wandol/Downloads/temp/metro_all_data.csv

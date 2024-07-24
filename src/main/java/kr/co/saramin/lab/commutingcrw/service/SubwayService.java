@@ -5,10 +5,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import kr.co.saramin.lab.commutingcrw.constant.Global;
-import kr.co.saramin.lab.commutingcrw.vo.MetroDataVO;
-import kr.co.saramin.lab.commutingcrw.vo.MetroVO;
-import kr.co.saramin.lab.commutingcrw.vo.ResultVO;
-import kr.co.saramin.lab.commutingcrw.vo.SeoulMetroVO;
+import kr.co.saramin.lab.commutingcrw.vo.*;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -17,16 +14,14 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.core.env.Environment;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.BufferedWriter;
+import java.net.URI;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -38,6 +33,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import kr.co.saramin.lab.commutingcrw.constant.Utils;
+import org.springframework.web.util.UriComponentsBuilder;
 
 @Component
 @Slf4j
@@ -53,13 +49,17 @@ public class SubwayService {
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
-        MultiValueMap<String, String> map= new LinkedMultiValueMap<>();
-        map.add("departureId", startMetroVO.getSt_id());
-        map.add("arrivalId", endMetroVO.getSt_id());
-        map.add("sKind","1");
-        HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
-        return restTemplate.postForEntity(
-                url.toURI(), request , String.class);
+        UriComponentsBuilder builder = UriComponentsBuilder.fromUri(url.toURI())
+                .queryParam("departureId", startMetroVO.getSt_id())
+                .queryParam("arrivalId", endMetroVO.getSt_id())
+                .queryParam("sKind", "1");
+        URI uri = builder.build().toUri();
+        HttpEntity<?> entity = new HttpEntity<>(headers);
+        return restTemplate.exchange(
+                uri,
+                HttpMethod.GET,
+                entity,
+                String.class);
     }
 
     @SneakyThrows
@@ -346,11 +346,49 @@ public class SubwayService {
         List<SeoulMetroVO.Station> seoulMetroVOList = getSeoulMetroData();
 
         List<MetroDataVO> m = mappingCode(metroDataVOList, seoulMetroVOList);
-
+        //  중복제거용
         String mergeDataPath = env.getProperty("metro.merge.filepath");
 
+//        List<MetroAllDataVO> all = mappingAllCode(metroDataVOList, seoulMetroVOList);
+//        //  전체
+//        String allDataPath = env.getProperty("metro.all.filepath");
+
         utils.fileWrite(mergeDataPath, m);
+//        utils.fileWrite(mergeDataPath, m);
     }
+
+//    private List<MetroAllDataVO> mappingAllCode(List<MetroDataVO> metroDataVOList, List<SeoulMetroVO.Station> seoulMetroVOList) {
+//        List<MetroAllDataVO> result = new ArrayList<>();
+//        if(Objects.nonNull(metroDataVOList) && Objects.nonNull(seoulMetroVOList)){
+//
+//            for (SeoulMetroVO.Station station : seoulMetroVOList) {
+//                MetroAllDataVO vo = MetroAllDataVO.builder()
+//                        .node_id(metroDataVOList.stream().filter(metroDataVO -> station.getLineNum().equals(metroDataVO.getNode_nm())))
+//                        .node_nm()
+//                        .st_id(station.getStationCd())
+//                        .st_nm(utils.checkStNm(station.getStationNm()))
+//                        .sri_st_code(metroDataVOList.stream().filter(metroDataVO -> utils.checkStNm(station.getStationNm()).equals(metroDataVO.getSt_nm())).findFirst().get().getSri_subway_cd())
+//                        .build();
+//            }
+//
+//            Map<String, List<SeoulMetroVO.Station>> map = seoulMetroVOList.stream()
+//                    .filter(Objects::nonNull)
+//                    .filter(station -> station.getStationNm() != null)
+//                    .collect(Collectors.groupingBy(SeoulMetroVO.Station::getStationNm));
+//
+//            for (MetroDataVO metroDataVO : metroDataVOList) {
+//                String key = utils.checkStNm(metroDataVO.getSt_nm());
+//
+//                if(map.get(key) != null){
+//                    metroDataVO.setSt_id(map.get(key).get(0).getStationCd());
+//                }else{
+//                    metroDataVO.setSt_id("reject");
+//                    System.out.println("?? " + metroDataVO);
+//                }
+//            }
+//        }
+//        return metroDataVOList;
+//    }
 
     /**
      *  사람인 내부 데이터 좌표 포함.
@@ -358,7 +396,7 @@ public class SubwayService {
      */
     @SneakyThrows
     private List<MetroDataVO> getSriMetroData() {
-        String metroInFile = env.getProperty("metro.data.filepath");
+        String metroInFile = env.getProperty("metro.merge.filepath");
         return Files.readAllLines(Paths.get(metroInFile)).stream()
                 .map(s -> s.split("\\|", 12))
                 .map(ss -> MetroDataVO.builder()
