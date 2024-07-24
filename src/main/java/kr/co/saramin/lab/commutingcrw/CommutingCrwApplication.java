@@ -42,16 +42,16 @@ public class CommutingCrwApplication implements CommandLineRunner {
     @PostConstruct
     public void init() {
         //  서울메트로 지하철코드 | 사람인 지하철코드
-        Path path = Paths.get(Objects.requireNonNull(env.getProperty("subway.filepath")));
+        Path path = Paths.get(Objects.requireNonNull(env.getProperty("metro.merge.filepath")));
         Files.readAllLines(path).forEach(s -> {
-            String[] cont = s.split("\\|", 6);
-            Global.SRI_CODE_MAP.put(cont[4], cont[1]);
+            String[] cont = s.split("\\|", 12);
+            Global.SRI_CODE_MAP.put(cont[2], cont[10]);
         });
 
         //  서울메트로 지하철코드 | 호선명
         Files.readAllLines(path).forEach(s -> {
-            String[] cont = s.split("\\|", 6);
-            Global.LINE_MAP.put(cont[4], cont[3]);
+            String[] cont = s.split("\\|", 12);
+            Global.LINE_MAP.put(cont[2], cont[0]);
         });
     }
 

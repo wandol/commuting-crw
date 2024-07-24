@@ -6,7 +6,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import kr.co.saramin.lab.commutingcrw.constant.Global;
 import kr.co.saramin.lab.commutingcrw.vo.MetroDataVO;
-import kr.co.saramin.lab.commutingcrw.vo.MetroVO;
 import kr.co.saramin.lab.commutingcrw.vo.ResultVO;
 import kr.co.saramin.lab.commutingcrw.vo.SeoulMetroVO;
 import lombok.RequiredArgsConstructor;
@@ -17,13 +16,11 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.core.env.Environment;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
+import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.BufferedWriter;
@@ -32,12 +29,11 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import kr.co.saramin.lab.commutingcrw.constant.Utils;
+import org.springframework.web.util.UriComponentsBuilder;
 
 @Component
 @Slf4j
@@ -49,17 +45,29 @@ public class SubwayService {
 
     @SneakyThrows
     public ResponseEntity<String> getStringResponseEntity(MetroDataVO startMetroVO, MetroDataVO endMetroVO) {
-        URL url = new URL(Objects.requireNonNull(env.getProperty("api.url")));
         RestTemplate restTemplate = new RestTemplate();
+        String baseUrl = env.getProperty("api.url");
+        UriComponentsBuilder url = UriComponentsBuilder.fromHttpUrl(baseUrl)
+                .queryParam("departureId", checkStId(startMetroVO.getSt_id()))
+                .queryParam("arrivalId", checkStId(endMetroVO.getSt_id()))
+                .queryParam("sKind", "1");
+
         HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
-        MultiValueMap<String, String> map= new LinkedMultiValueMap<>();
-        map.add("departureId", startMetroVO.getSt_id());
-        map.add("arrivalId", endMetroVO.getSt_id());
-        map.add("sKind","1");
-        HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
-        return restTemplate.postForEntity(
-                url.toURI(), request , String.class);
+        headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+        headers.set("Accept", MediaType.ALL_VALUE);
+
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+        log.info(url.toUriString());
+        return restTemplate.exchange(
+                url.toUriString(), HttpMethod.GET, entity, String.class);
+    }
+
+    public String checkStId(String stId){
+        String result = stId;
+        if(StringUtils.hasText(stId) && stId.length() <= 3){
+            return "0" + result;
+        }
+        return result;
     }
 
     @SneakyThrows
@@ -175,9 +183,9 @@ public class SubwayService {
     @SneakyThrows
     public void getCommutingAll() {
         List<ResultVO> miss = new ArrayList<>();
-
+        String mergeDataPath = env.getProperty("metro.merge.filepath");
         //  중복제거된 지하철역 데이터 파일 읽기
-        List<MetroDataVO> metroDataVOList = getSriMetroData();
+        List<MetroDataVO> metroDataVOList = getSriMetroData(mergeDataPath);
 
 //        for (int i = 2; i < 3; i++) {
         List<ResultVO> resultList = new ArrayList<>();
@@ -339,15 +347,15 @@ public class SubwayService {
      */
     @SneakyThrows
     public void mergeMetroData() {
+        String sriDataPath = env.getProperty("metro.data.filepath");
+        String mergeDataPath = env.getProperty("metro.merge.filepath");
 
         //  내부 데이터
-        List<MetroDataVO> metroDataVOList = getSriMetroData();
+        List<MetroDataVO> metroDataVOList = getSriMetroData(sriDataPath);
         //  외부 데이터
         List<SeoulMetroVO.Station> seoulMetroVOList = getSeoulMetroData();
 
         List<MetroDataVO> m = mappingCode(metroDataVOList, seoulMetroVOList);
-
-        String mergeDataPath = env.getProperty("metro.merge.filepath");
 
         utils.fileWrite(mergeDataPath, m);
     }
@@ -357,9 +365,8 @@ public class SubwayService {
      * @return
      */
     @SneakyThrows
-    private List<MetroDataVO> getSriMetroData() {
-        String metroInFile = env.getProperty("metro.data.filepath");
-        return Files.readAllLines(Paths.get(metroInFile)).stream()
+    private List<MetroDataVO> getSriMetroData(String filePath) {
+        return Files.readAllLines(Paths.get(filePath)).stream()
                 .map(s -> s.split("\\|", 12))
                 .map(ss -> MetroDataVO.builder()
                         .node_id(ss[0])

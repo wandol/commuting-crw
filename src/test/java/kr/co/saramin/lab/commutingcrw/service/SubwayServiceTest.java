@@ -4,8 +4,9 @@ import com.google.gson.Gson;
 import kr.co.saramin.lab.commutingcrw.vo.MetroDataVO;
 import kr.co.saramin.lab.commutingcrw.vo.SeoulMetroVO;
 import org.junit.jupiter.api.Test;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -20,7 +21,28 @@ import java.util.stream.Collectors;
 
 
 class SubwayServiceTest {
-    
+
+    @Test
+    public void test() {
+        RestTemplate restTemplate = new RestTemplate();
+        String baseUrl = "http://www.seoulmetro.co.kr/kr/getRouteSearchResult.do";
+        // UriComponentsBuilder를 사용하여 URL과 파라미터를 설정
+        UriComponentsBuilder url = UriComponentsBuilder.fromHttpUrl(baseUrl)
+                .queryParam("departureId", "0321")
+                .queryParam("arrivalId", "0425")
+                .queryParam("sKind", "1");
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+        headers.set("Accept", MediaType.ALL_VALUE);
+
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+
+        ResponseEntity<String> response = restTemplate.exchange(
+                url.toUriString(), HttpMethod.GET, entity, String.class);
+        System.out.println(response.getBody());
+    }
+
     @Test
     public void test1() throws URISyntaxException, IOException {
 
