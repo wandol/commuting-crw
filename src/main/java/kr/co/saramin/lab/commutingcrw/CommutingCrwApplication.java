@@ -80,6 +80,6 @@ public class CommutingCrwApplication implements CommandLineRunner {
 //        	metro_data 볼륨 생성
 //        subwayService.makeMetroData();
 //		subwayService.makeHapSubdata();
-        System.exit(0);
+            System.exit(0);
     }
 }

@@ -5,9 +5,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import kr.co.saramin.lab.commutingcrw.constant.Global;
-import kr.co.saramin.lab.commutingcrw.vo.MetroDataVO;
-import kr.co.saramin.lab.commutingcrw.vo.ResultVO;
-import kr.co.saramin.lab.commutingcrw.vo.SeoulMetroVO;
+import kr.co.saramin.lab.commutingcrw.vo.*;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -21,14 +19,18 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.util.StringUtils;
+import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.BufferedWriter;
+import java.net.URI;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -45,21 +47,21 @@ public class SubwayService {
 
     @SneakyThrows
     public ResponseEntity<String> getStringResponseEntity(MetroDataVO startMetroVO, MetroDataVO endMetroVO) {
+        URL url = new URL(Objects.requireNonNull(env.getProperty("api.url")));
         RestTemplate restTemplate = new RestTemplate();
-        String baseUrl = env.getProperty("api.url");
-        UriComponentsBuilder url = UriComponentsBuilder.fromHttpUrl(baseUrl)
-                .queryParam("departureId", checkStId(startMetroVO.getSt_id()))
-                .queryParam("arrivalId", checkStId(endMetroVO.getSt_id()))
-                .queryParam("sKind", "1");
-
         HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.MULTIPART_FORM_DATA);
-        headers.set("Accept", MediaType.ALL_VALUE);
-
-        HttpEntity<String> entity = new HttpEntity<>(headers);
-        log.info(url.toUriString());
+        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+        UriComponentsBuilder builder = UriComponentsBuilder.fromUri(url.toURI())
+                .queryParam("departureId", startMetroVO.getSt_id())
+                .queryParam("arrivalId", endMetroVO.getSt_id())
+                .queryParam("sKind", "1");
+        URI uri = builder.build().toUri();
+        HttpEntity<?> entity = new HttpEntity<>(headers);
         return restTemplate.exchange(
-                url.toUriString(), HttpMethod.GET, entity, String.class);
+                uri,
+                HttpMethod.GET,
+                entity,
+                String.class);
     }
 
     public String checkStId(String stId){
