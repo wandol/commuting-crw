@@ -387,33 +387,16 @@ public class SubwayService {
     }
 
     /**
-     *  내외부 데이터 머지.
-     *  1. 지하철 역명 비교,
-     *  2.  호선명 포함여부 체크
+     * 내외부 데이터 머지.
+     * 1. 지하철 역명 비교,
+     * 2.  호선명 포함여부 체크
+     *
      * @param metroDataVOList
      * @param seoulMetroVOList
      * @return
      */
     private List<MetroDataVO> mappingCode(List<MetroDataVO> metroDataVOList, List<SeoulMetroVO.Station> seoulMetroVOList) {
-        if(Objects.nonNull(metroDataVOList) && Objects.nonNull(seoulMetroVOList)){
-
-            Map<String, List<SeoulMetroVO.Station>> map = seoulMetroVOList.stream()
-                    .filter(Objects::nonNull)
-                    .filter(station -> station.getStationNm() != null)
-                    .collect(Collectors.groupingBy(SeoulMetroVO.Station::getStationNm));
-
-            for (MetroDataVO metroDataVO : metroDataVOList) {
-                String key = utils.checkStNm(metroDataVO.getSt_nm());
-
-                if(map.get(key) != null){
-                    metroDataVO.setSt_id(map.get(key).get(0).getStationCd());
-                }else{
-                    metroDataVO.setSt_id("reject");
-                    System.out.println("?? " + metroDataVO);
-                }
-            }
-        }
-        return metroDataVOList;
+        return null;
     }
 
     /**
@@ -427,5 +410,8 @@ public class SubwayService {
         ResponseEntity<String> responseEntity = restTemplate.getForEntity(url.toURI(), String.class);
         SeoulMetroVO response = new Gson().fromJson(responseEntity.getBody(), SeoulMetroVO.class);
         return Objects.nonNull(response.getList()) ? response.getList() : null;
+    }
+
+    public void sindorimP() {
     }
 }

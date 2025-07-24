@@ -1,3 +1,6 @@
+server:
+  port: 8282
+
 
 ---
 
@@ -26,6 +29,16 @@ metro:
     filepath: C:\develop\commuting\metro_merge_data.csv
   all:
     filepath: /Users/wandol/Downloads/temp/metro_all_data.csv
+
+sindorim:
+  commuting: /Users/user/commuting/commuting_all
+  persons: /Users/user/commuting/metro_persons
+  com: /Users/user/commuting/companyinfo_search
+  targetMember: /Users/user/commuting/mem_csn_output.csv
+  no-targetMember: /Users/user/commuting/mem_no_csn_output.csv
+  metro-info: /Users/user/commuting/metro_data.csv
+  metro-sri: /Users/user/commuting/sri_subway_all.csv
+
 ---
 
 spring:

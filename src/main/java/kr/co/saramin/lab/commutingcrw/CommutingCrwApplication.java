@@ -1,6 +1,8 @@
 package kr.co.saramin.lab.commutingcrw;
 
 import kr.co.saramin.lab.commutingcrw.constant.Global;
+import kr.co.saramin.lab.commutingcrw.service.MetroService;
+import kr.co.saramin.lab.commutingcrw.service.SindorimService;
 import kr.co.saramin.lab.commutingcrw.service.SubwayService;
 import kr.co.saramin.lab.commutingcrw.vo.MetroVO;
 import kr.co.saramin.lab.commutingcrw.vo.ResultVO;
@@ -30,6 +32,8 @@ public class CommutingCrwApplication implements CommandLineRunner {
     private final Environment env;
 
     private final SubwayService subwayService;
+    private final MetroService metroService;
+    private final SindorimService sindorimService;
 
     public static void main(String[] args) {
         SpringApplication.run(CommutingCrwApplication.class, args);
@@ -38,22 +42,22 @@ public class CommutingCrwApplication implements CommandLineRunner {
     /**
      * 초기 매핑 사전 load
      */
-    @SneakyThrows
-    @PostConstruct
-    public void init() {
-        //  서울메트로 지하철코드 | 사람인 지하철코드
-        Path path = Paths.get(Objects.requireNonNull(env.getProperty("metro.merge.filepath")));
-        Files.readAllLines(path).forEach(s -> {
-            String[] cont = s.split("\\|", 12);
-            Global.SRI_CODE_MAP.put(cont[2], cont[10]);
-        });
-
-        //  서울메트로 지하철코드 | 호선명
-        Files.readAllLines(path).forEach(s -> {
-            String[] cont = s.split("\\|", 12);
-            Global.LINE_MAP.put(cont[2], cont[0]);
-        });
-    }
+//    @SneakyThrows
+//    @PostConstruct
+//    public void init() {
+//        //  서울메트로 지하철코드 | 사람인 지하철코드
+//        Path path = Paths.get(Objects.requireNonNull(env.getProperty("metro.merge.filepath")));
+//        Files.readAllLines(path).forEach(s -> {
+//            String[] cont = s.split("\\|", 12);
+//            Global.SRI_CODE_MAP.put(cont[2], cont[10]);
+//        });
+//
+//        //  서울메트로 지하철코드 | 호선명
+//        Files.readAllLines(path).forEach(s -> {
+//            String[] cont = s.split("\\|", 12);
+//            Global.LINE_MAP.put(cont[2], cont[0]);
+//        });
+//    }
 
     // TODO: 2024-04-08 상세한 절차 설명 필요.
 
@@ -76,7 +80,13 @@ public class CommutingCrwApplication implements CommandLineRunner {
         //  지하철 정보 관련 파일 머지
         //  vdi에서 가져온 사람인 코드와 좌표 정보가 있는 지하철 파일 필요
 //        subwayService.mergeMetroData();
-		subwayService.getCommutingAll();
+
+//		subwayService.getCommutingAll();
+
+        // 20250725
+        metroService.makeRawData();
+//        metroService.addGTX();
+//        sindorimService.sindorimP();
 //        	metro_data 볼륨 생성
 //        subwayService.makeMetroData();
 //		subwayService.makeHapSubdata();

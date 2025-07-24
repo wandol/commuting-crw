@@ -13,6 +13,8 @@ import lombok.*;
 @ToString
 @Builder
 public class MetroDataVO {
+    private String csn;
+    private String mem_idx;
     private String node_id;
     private String node_nm;
     private String st_id;
@@ -24,10 +26,11 @@ public class MetroDataVO {
     private String trans_type;
     private String area_nm;
     private String sri_subway_cd;
+    private Double dis;
 
     @Override
     public String toString() {
-        return node_id + '|' + node_nm + '|' + st_id + '|'
+        return csn + '|' + node_id + '|' + node_nm + '|' + st_id + '|'
                 + st_nm + '|'
                 + gps_x + '|'
                 + gps_y + '|'
@@ -35,6 +38,14 @@ public class MetroDataVO {
                 + gps_y_real + '|'
                 + trans_type + '|'
                 + area_nm + '|'
+                + sri_subway_cd ;
+    }
+
+    public String toMemString() {
+        return this.mem_idx + '|' + st_id + '|'
+                + st_nm + '|'
+                + gps_x_real + '|'
+                + gps_y_real + '|'
                 + sri_subway_cd ;
     }
 }
