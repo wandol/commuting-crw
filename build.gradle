@@ -18,8 +18,8 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 
-	// https://mvnrepository.com/artifact/org.jsoup/jsoup
-	implementation group: 'org.jsoup', name: 'jsoup', version: '1.14.3'
+	implementation 'org.jsoup:jsoup:1.17.2'
+	implementation 'org.apache.httpcomponents:httpclient:4.5.14'
 	implementation 'com.google.code.gson:gson:2.10.1'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
