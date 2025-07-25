@@ -91,26 +91,38 @@ public class MakeRawData {
     private void makeCommuting() {
         List<MetroSriVO> stationList = readCsvWithReflection(METRO_DATA,
                 parts -> new MetroSriVO(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]));
-        Map<String, MetroSriVO> stationMap = stationList.stream()
-                .collect(Collectors.toMap(MetroSriVO::getExternal_id, st -> st));
+//        Map<String, MetroSriVO> stationMap = stationList.stream()
+//                .collect(Collectors.toMap(MetroSriVO::getExternal_id, st -> st));
 
+        Map<String, List<MetroSriVO>> grouped = stationList.stream()
+                .collect(Collectors.groupingBy(MetroSriVO::getExternal_id));
 
-        for (MetroSriVO from : stationList) {
-            List<CommutingAllData> results = new ArrayList<>();
-            for (MetroSriVO to : stationList) {
-                if (from.getExternal_id().equals(to.getExternal_id())) continue;
-                CommutingAllData result = processRoute(from, to, stationMap);
-                if (result != null) {
-                    results.add(result);
-                } else {
-                    log.error("{}/{}", from.getExternal_id(), to.getExternal_id());
-                    System.exit(1);
-                }
-            }
-            Path outputPath = Paths.get("routes", from.getSt_id() + "_routes.json");
-            Files.createDirectories(outputPath.getParent());
-            Files.write(outputPath, gson.toJson(results).getBytes(StandardCharsets.UTF_8));
-        }
+// 중복된 external_id만 필터링
+        grouped.entrySet().stream()
+                .filter(entry -> entry.getValue().size() > 1)
+                .forEach(entry -> {
+                    System.out.println("⚠️ Duplicate external_id: " + entry.getKey());
+                    entry.getValue().forEach(vo ->
+                            System.out.printf("   ↳ nodeId=%s, code=%s, name=%s, line=%s%n",
+                                    vo.getNode_id(), vo.getSt_id(), vo.getSt_nm(), vo.getNode_nm()));
+                });
+
+//        for (MetroSriVO from : stationList) {
+//            List<CommutingAllData> results = new ArrayList<>();
+//            for (MetroSriVO to : stationList) {
+//                if (from.getExternal_id().equals(to.getExternal_id())) continue;
+//                CommutingAllData result = processRoute(from, to, stationMap);
+//                if (result != null) {
+//                    results.add(result);
+//                } else {
+//                    log.error("{}/{}", from.getExternal_id(), to.getExternal_id());
+//                    System.exit(1);
+//                }
+//            }
+//            Path outputPath = Paths.get("routes", from.getSt_id() + "_routes.json");
+//            Files.createDirectories(outputPath.getParent());
+//            Files.write(outputPath, gson.toJson(results).getBytes(StandardCharsets.UTF_8));
+//        }
     }
 
     public CommutingAllData processRoute(MetroSriVO from, MetroSriVO to, Map<String, MetroSriVO> stationMap) {

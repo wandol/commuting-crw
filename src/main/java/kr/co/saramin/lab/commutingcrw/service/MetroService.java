@@ -50,9 +50,4 @@ public class MetroService {
         makeRawData.all();
     }
 
-    public void addGTX() {
-
-    }
-
-
 }

@@ -1,0 +1,45 @@
+⚠️ Duplicate external_id: SES3701
+   ↳ nodeId=201, code=20123, name=기흥, line=수인분당선
+   ↳ nodeId=1301, code=130101, name=기흥, line=에버라인
+⚠️ Duplicate external_id: SES3714
+   ↳ nodeId=1301, code=130113, name=보평, line=에버라인
+   ↳ nodeId=1301, code=130114, name=둔전, line=에버라인
+⚠️ Duplicate external_id: SES3144
+   ↳ nodeId=301, code=30113, name=국제업무지구, line=인천 1호선
+   ↳ nodeId=301, code=30125, name=센트럴파크, line=인천 1호선
+⚠️ Duplicate external_id: SES4013
+   ↳ nodeId=1001, code=100113, name=능곡, line=경의중앙선
+   ↳ nodeId=1601, code=160116, name=능곡, line=서해선
+⚠️ Duplicate external_id: SES3169
+   ↳ nodeId=101, code=10124, name=서울역, line=서울 1호선
+   ↳ nodeId=901, code=90108, name=서울역, line=공항철도
+⚠️ Duplicate external_id: SES3114
+   ↳ nodeId=301, code=30118, name=경인교대입구, line=인천 1호선
+   ↳ nodeId=301, code=30119, name=계산, line=인천 1호선
+⚠️ Duplicate external_id: SES3606
+   ↳ nodeId=202, code=20205, name=의정부시청, line=의정부경전철
+   ↳ nodeId=202, code=20206, name=흥선, line=의정부경전철
+⚠️ Duplicate external_id: SES3601
+   ↳ nodeId=202, code=20201, name=발곡, line=의정부경전철
+   ↳ nodeId=202, code=20202, name=회룡, line=의정부경전철
+⚠️ Duplicate external_id: SES41M174
+   ↳ nodeId=1501, code=150103, name=성신여대입구, line=우이신설선
+   ↳ nodeId=1501, code=150104, name=정릉, line=우이신설선
+⚠️ Duplicate external_id: SES41M165
+   ↳ nodeId=1501, code=150112, name=솔밭공원, line=우이신설선
+   ↳ nodeId=1501, code=150113, name=북한산우이, line=우이신설선
+⚠️ Duplicate external_id: SES3406
+   ↳ nodeId=1101, code=110106, name=정자, line=신분당선
+   ↳ nodeId=1101, code=110113, name=미금, line=신분당선
+⚠️ Duplicate external_id: SES7M247
+   ↳ nodeId=107, code=10762, name=석남, line=서울 7호선
+   ↳ nodeId=302, code=30215, name=석남, line=인천 2호선
+⚠️ Duplicate external_id: SES1806
+   ↳ nodeId=101, code=10143, name=부평, line=서울 1호선
+   ↳ nodeId=301, code=30123, name=부평, line=인천 1호선
+⚠️ Duplicate external_id: SES39M120
+   ↳ nodeId=302, code=30216, name=석바위시장, line=인천 2호선
+   ↳ nodeId=302, code=30225, name=인천시청, line=인천 2호선
+⚠️ Duplicate external_id: SES39M107
+   ↳ nodeId=302, code=30206, name=검바위, line=인천 2호선
+   ↳ nodeId=302, code=30207, name=검암, line=인천 2호선
