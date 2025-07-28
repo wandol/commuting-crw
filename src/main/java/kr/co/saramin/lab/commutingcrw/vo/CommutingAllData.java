@@ -5,29 +5,25 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class CommutingAllData {
-    private String fromSt;
-    private String fromId;
-    private String fromNodeNm;
-    private String fromNodeId;
-    private String to;
-    private String toId;
-    private String toNodeNm;
-    private String toNodeId;
+    Set<String> from_st_id;
+    Set<String> to_st_id;
     private int totalCost;
-    private String x_coordinate;
-    private String y_coordinate;
-    private List<String> pathsNm;
-    private List<String> pathsCd;
+    List<Subway> path;
+    LinkedHashSet<String> path_st_ids;
     private String transferNode;
     private String transferStNm;
-    private String transferStCd;
-    private List<Map<String, String>> external_route;
+    private String transferStId;
+    private String region;
+    private String reg_dt;
+    private String up_dt;
 }

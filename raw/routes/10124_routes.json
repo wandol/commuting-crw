@@ -1,0 +1,41 @@
+[
+  {
+    "from_st_id": [
+      "100120",
+      "190105",
+      "10453",
+      "90108",
+      "10124"
+    ],
+    "to_st_id": [
+      "160103"
+    ],
+    "totalCost": 50,
+    "path": [
+      {
+        "node_id": "101",
+        "st_id": "10124",
+        "node_nm": "서울 1호선",
+        "st_nm": "서울역",
+        "external_id": "SES0150"
+      },
+      {
+        "node_id": "1601",
+        "st_id": "160103",
+        "node_nm": "서해선",
+        "st_nm": "시흥대야",
+        "external_id": "SES42M193"
+      }
+    ],
+    "path_st_ids": [
+      "10124",
+      "160103"
+    ],
+    "transferNode": "1호선,subway_transfer,서해선",
+    "transferStNm": "",
+    "transferStId": "",
+    "region": "metro",
+    "reg_dt": "20250728154915",
+    "up_dt": "20250728154915"
+  }
+]
