@@ -1,5 +1,6 @@
 package kr.co.saramin.lab.commutingcrw.constant;
 
+import kr.co.saramin.lab.commutingcrw.vo.MetroAllDataVO;
 import kr.co.saramin.lab.commutingcrw.vo.MetroDataVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -33,7 +34,38 @@ public class Utils {
         return stNm;
     }
 
+    /**
+     *  지하철 호선명 수정
+     *  외부 통근경로와 사람인 호선명이 달라 외부 통근경로명으로 변경
+     * @param node_nm
+     * @return
+     */
+    public String checkSriNodeNm(String node_nm) {
+        if(node_nm.contains("서울 ")) return node_nm.replace("서울 ", "");
+        if(node_nm.contains("에버라인")) return "용인경전철";
+        if(node_nm.contains("인천 1호선")) return "인천1호선";
+        if(node_nm.contains("인천 2호선")) return "인천2호선";
+        if(node_nm.contains("우이신설선")) return "우이신설경전철";
+        if(node_nm.contains("김포골드")) return "김포도시철도";
+        return node_nm;
+    }
+
     public void fileWrite(String mergeDataPath, List<MetroDataVO> m) {
+        try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(mergeDataPath))) {
+            m.forEach(line -> {
+                try {
+                    writer.write(line.toString());
+                    writer.newLine();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void fileWriteAll(String mergeDataPath, List<MetroAllDataVO> m) {
         try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(mergeDataPath))) {
             m.forEach(line -> {
                 try {
