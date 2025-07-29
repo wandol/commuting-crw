@@ -23,8 +23,10 @@ import java.util.stream.Collectors;
 class SubwayDataProcessor {
 
     private static final String METRO_SRI = "metro_sri.csv";
+    private static final String ETC_SRI = "etc_sri.csv";
     private static final String SUBWAY_TRANS = "subway_trans.csv";
     private static final String METRO_DATA = "metro_sri_coord.csv";
+    private static final String ETC_DATA = "etc_sri_coord.csv";
 
     private final DataIoService dataIoService;
     private final KakaoApiClient kakaoApiClient;
@@ -59,7 +61,9 @@ class SubwayDataProcessor {
      */
     @SneakyThrows
     public void makeCoordinateData() {
-        List<MetroSriVO> stationList = dataIoService.readCsv(METRO_SRI,
+//        List<MetroSriVO> stationList = dataIoService.readCsv(METRO_SRI,
+//                parts -> new MetroSriVO(parts[0], parts[1], parts[2], parts[3]));
+        List<MetroSriVO> stationList = dataIoService.readCsv(ETC_SRI,
                 parts -> new MetroSriVO(parts[0], parts[1], parts[2], parts[3]));
 
         List<String> outputLines = new ArrayList<>();
@@ -77,7 +81,8 @@ class SubwayDataProcessor {
             Thread.sleep(200); // API rate limit 방지
         }
 
-        dataIoService.writeCsv(METRO_DATA, outputLines);
+//        dataIoService.writeCsv(METRO_DATA, outputLines);
+        dataIoService.writeCsv(ETC_DATA, outputLines);
     }
 
     /**

@@ -1,5 +1,6 @@
 package kr.co.saramin.lab.commutingcrw.module;
 
+import kr.co.saramin.lab.commutingcrw.constant.Region;
 import kr.co.saramin.lab.commutingcrw.vo.*;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
@@ -18,6 +19,8 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.security.SecureRandom;
 import java.security.cert.X509Certificate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -41,7 +44,9 @@ import java.util.stream.Collectors;
 public class MakeRawData {
 
     private static final String ALL_SUBWAY = "subway.json";
+    private static final String ETC_SUBWAY = "subway_etc.json";
     private static final String METRO_DATA = "metro_sri_coord.csv";
+    private static final String ETC_DATA = "etc_sri_coord.csv";
 
     private final DataIoService dataIoService;
     private final SubwayDataProcessor subwayDataProcessor;
@@ -82,17 +87,24 @@ public class MakeRawData {
         // 통근경로/시간을 구할때 필요한 id 값 확인 하여 전체 데이터 저장.
 //         subwayDataProcessor.makeCoordinateData();  //  kakao api 활용
 
+        // 최종 파일 검증 (빈 데이터 체크)
+//        fileCheck(METRO_DATA);
+
         // 신규 역 데이터 생성 (콘솔 출력으로 복사하여 사용)
 //         subwayDataProcessor.makeNewStation();      //  신규역 데이터 수집
 
         // 전체 지하철 JSON 파일 생성
-//         makeSubwayAll();
+        //  csv ->  json (최종파일로 es 색인용)
+//         makeSubwayAll(METRO_DATA,ALL_SUBWAY);
+//        makeSubwayAll(ETC_DATA,ETC_SUBWAY);
 
         // 통근 경로 데이터 생성
-        makeCommuting();
+//        makeCommuting();
 
-        // 최종 파일 검증 (빈 데이터 체크)
-        // fileCheck();
+
+
+        //  output file 검증
+//        dataIoService.validateCommutingData();
     }
 
     /**
@@ -101,9 +113,9 @@ public class MakeRawData {
      * 출력: subway.json
      */
     @SneakyThrows
-    public void makeSubwayAll() {
+    public void makeSubwayAll(String fileName, String outputFileName) {
         // 좌표 데이터 로드
-        List<Subway> records = dataIoService.readCsv(METRO_DATA, parts -> Subway.builder()
+        List<Subway> records = dataIoService.readCsv(fileName, parts -> Subway.builder()
                 .node_id(parts[0])
                 .st_id(parts[1])
                 .node_nm(parts[2])
@@ -121,14 +133,16 @@ public class MakeRawData {
                         .st_nm(entry.getKey())
                         .is_transfer(entry.getValue().size() > 1)
                         .info(entry.getValue())
-                        .region("metro")
+                        .region(Region.fromNodeId(entry.getValue().get(0).getNode_id()).name())
+                        .reg_dt(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")))
+                        .up_dt(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")))
                         .build())
                 .collect(Collectors.toList());
 
         // JSON으로 변환 및 쓰기
-        dataIoService.writeJson(ALL_SUBWAY, stationMeta);
+        dataIoService.writeJson(outputFileName, stationMeta);
 
-        log.info("JSON 파일 생성 완료: {}", ALL_SUBWAY);
+        log.info("JSON 파일 생성 완료: {}", outputFileName);
     }
 
     /**
@@ -185,8 +199,8 @@ public class MakeRawData {
      * 최종 지하철 원천 파일의 빈 데이터를 검증합니다.
      * 빈 필드가 있는 레코드를 로그로 출력.
      */
-    private void fileCheck() {
-        List<MetroSriVO> stationList = dataIoService.readCsv(METRO_DATA,
+    private void fileCheck(String fileName) {
+        List<MetroSriVO> stationList = dataIoService.readCsv(fileName,
                 parts -> new MetroSriVO(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]));
 
         for (MetroSriVO m : stationList) {
