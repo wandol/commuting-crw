@@ -138,7 +138,7 @@ public class SindorimService {
         return Arrays.asList(value.split("\\|"));
     }
 
-    @PostConstruct
+//    @PostConstruct
     @SneakyThrows
     private void loadMetroData(){
         log.info("==== dictionary subway-info-data ====");

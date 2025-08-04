@@ -1,5 +1,8 @@
 package kr.co.saramin.lab.commutingcrw.module;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.reflect.TypeToken;
 import kr.co.saramin.lab.commutingcrw.constant.Region;
 import kr.co.saramin.lab.commutingcrw.vo.*;
 import lombok.RequiredArgsConstructor;
@@ -99,7 +102,7 @@ public class MakeRawData {
 //        makeSubwayAll(ETC_DATA,ETC_SUBWAY);
 
         // 통근 경로 데이터 생성
-//        makeCommuting();
+        makeCommuting();
 
 
 
@@ -154,7 +157,10 @@ public class MakeRawData {
     @SneakyThrows
     private void makeCommuting() {
         // 지하철 메타데이터 로드 (테스트 파일 사용 가능)
-        List<SubwayVo> stationList = dataIoService.loadSubwayMeta("subway_test.json"); // 또는 ALL_SUBWAY 사용
+        List<SubwayVo> stationList = dataIoService.loadSubwayMeta("subway_etc.json")
+                .stream()
+                .filter(m -> "daegu".equals(m.getRegion()))
+                .collect(Collectors.toList()); // 또는 ALL_SUBWAY 사용
 
         // 모든 역 정보를 맵으로 변환 (external_id 기준)
         Map<String, Subway> stationMap = stationList.stream()
@@ -170,28 +176,56 @@ public class MakeRawData {
             for (SubwayVo fromVo : stationList) {
                 List<CommutingAllData> results = new ArrayList<>();
                 Subway from = fromVo.getInfo().get(0);
-
-                for (SubwayVo toVo : stationList) {
-                    Subway to = toVo.getInfo().get(0);
-                    if (!from.getExternal_id().equals(to.getExternal_id())) {
-                        try {
-                            CommutingAllData result = commutingRouteService.processRoute(from, to, stationMap, "metro");
-                            if (result != null) {
-                                results.add(result);
-                            } else {
-                                errorLog.write(String.join(",", "[PROCESS FAIL]", from.getExternal_id(), to.getExternal_id()) + "\n");
+//                if(checkCommutingFile(from)){
+                    for (SubwayVo toVo : stationList) {
+                        Subway to = toVo.getInfo().get(0);
+                        if (!from.getExternal_id().equals(to.getExternal_id())) {
+                            try {
+                                CommutingAllData result = commutingRouteService.processRoute(from, to, stationMap, "daegu");
+                                if (result != null) {
+                                    results.add(result);
+                                } else {
+                                    errorLog.write(String.join(",", "[PROCESS FAIL]", from.getExternal_id(), to.getExternal_id()) + "\n");
+                                }
+                            } catch (Exception e) {
+                                errorLog.write(String.join(",", "[EXCEPTION]", from.getExternal_id(), to.getExternal_id(), e.getMessage()) + "\n");
+                                log.error("통근 경로 처리 중 오류: from={}, to={}, error={}", from.getSt_nm(), to.getSt_nm(), e.getMessage(), e);
                             }
-                        } catch (Exception e) {
-                            errorLog.write(String.join(",", "[EXCEPTION]", from.getExternal_id(), to.getExternal_id(), e.getMessage()) + "\n");
-                            log.error("통근 경로 처리 중 오류: from={}, to={}, error={}", from.getSt_nm(), to.getSt_nm(), e.getMessage(), e);
                         }
+                        Thread.sleep(200);
                     }
-                }
 
-                // 결과 JSON 쓰기
-                Path outputPath = Paths.get("routes", from.getSt_id() + "_routes.json");
-                dataIoService.writeJson(outputPath.toString(), results);
+                    // 결과 JSON 쓰기
+                    Path outputPath = Paths.get("/Users/wandol/commuting/routes_daegu", from.getSt_id() + "_routes.json");
+                    dataIoService.writeJson(outputPath.toString(), results);
+//                }
             }
+        }
+    }
+
+    /**
+     *  기분석된 결과가 있으면 pass
+     */
+    private boolean checkCommutingFile(Subway from) {
+        try {
+            // 파일 경로 생성
+            Path filePath = Paths.get("/Users/wandol/commuting/routes_daegu", from.getSt_id() + "_routes.json");
+            List<CommutingAllData> fileRoutes = dataIoService.fromCommutingData(filePath);
+            if(fileRoutes == null)  return true;
+            // 배열 크기가 649인지 확인
+            int arraySize = fileRoutes.size();
+            if (arraySize == 649) {
+                log.info("파일 {}의 배열 크기가 649입니다.", filePath);
+                return false;
+            } else {
+                log.warn("파일 {}의 배열 크기가 649가 아님: {}", filePath, arraySize);
+                return true;
+            }
+
+        } catch (Exception e) {
+            // 파일이 없거나 읽기 실패 시
+            log.error("파일 확인 중 오류: from={}, error={}", from.getSt_nm(), e.getMessage(), e);
+            return true;
         }
     }
 

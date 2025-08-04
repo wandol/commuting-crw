@@ -41,7 +41,7 @@ class CommutingRouteService {
      */
     public CommutingAllData processRoute(Subway from, Subway to, Map<String, Subway> stationMap, String region) {
         try {
-            String apiUrl = "https://map.kakao.com/api/subway/routes/current/metropolitan/"
+            String apiUrl = "https://map.kakao.com/api/subway/routes/current/daegu/"
                     + from.getExternal_id() + "--08:00:00/" + to.getExternal_id()
                     + "?resultTimeFormat=TIME_STRING&findingType=NORMAL&dayType=WEEKDAY";
 

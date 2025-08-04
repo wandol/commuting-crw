@@ -214,4 +214,19 @@ class DataIoService {
             log.info("파일 데이터 검증 성공: file={}, {}건", file.getFileName(), EXPECTED_ROUTES_PER_FILE);
         }
     }
+
+    public List<CommutingAllData> fromCommutingData(Path filePath) {
+        List<CommutingAllData> routes =  new ArrayList<>();
+        // dataIoService를 통해 JSON 파일 읽기
+        try (FileReader reader = new FileReader(filePath.toFile(), StandardCharsets.UTF_8)) {
+            List<CommutingAllData> fileRoutes = gson.fromJson(reader, new TypeToken<List<CommutingAllData>>(){}.getType());
+            if (fileRoutes != null) {
+                routes.addAll(fileRoutes);
+            }
+            return routes;
+        } catch (Exception e) {
+            log.error("파일 읽기 실패: file={}, error={}", filePath, e.getMessage());
+            return null;
+        }
+    }
 }
