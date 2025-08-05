@@ -41,12 +41,12 @@ class CommutingRouteService {
      */
     public CommutingAllData processRoute(Subway from, Subway to, Map<String, Subway> stationMap, String region) {
         try {
-            String apiUrl = "https://map.kakao.com/api/subway/routes/current/daegu/"
+            String apiUrl = "https://map.kakao.com/api/subway/routes/current/" + region + "/"
                     + from.getExternal_id() + "--08:00:00/" + to.getExternal_id()
                     + "?resultTimeFormat=TIME_STRING&findingType=NORMAL&dayType=WEEKDAY";
 
             // 응답 캐싱 디렉토리 및 파일
-            Path debugDir = Paths.get("route_api_responses", from.getSt_id());
+            Path debugDir = Paths.get("/Users/wandol/commuting/route_api_responses", from.getSt_id());
             Files.createDirectories(debugDir);
             String fileName = from.getExternal_id() + "_TO_" + to.getExternal_id() + ".json";
             Path responseFile = debugDir.resolve(fileName);

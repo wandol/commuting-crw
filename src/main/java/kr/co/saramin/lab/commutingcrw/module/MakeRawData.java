@@ -46,7 +46,8 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class MakeRawData {
 
-    private static final String SUBWAY_PRE_PATH = "/Users/user/commuting/2025/final";
+//    private static final String SUBWAY_PRE_PATH = "/Users/user/commuting/2025/final";
+    private static final String SUBWAY_PRE_PATH = "/Users/wandol/commuting";
     private static final String ALL_SUBWAY = "subway.json";
     private static final String BUSAN_SUBWAY = "subway_busan.json";
     private static final String DAEJEON_SUBWAY = "subway_daejeon.json";
