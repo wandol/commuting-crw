@@ -8,7 +8,7 @@ public enum Region {
     daegu("5"),
     gwangju("6"),
     daejeon("8"),
-    metro("default");  // 그 외 모든 경우
+    metro("metro");  // 그 외 모든 경우
 
     private final String prefix;
 

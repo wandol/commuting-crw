@@ -17,10 +17,10 @@ public class MetroSriVO {
     private String st_lon;
     private String external_id;
 
-    public MetroSriVO(String part, String part1, String part2, String part3) {
-        this.node_id = part;
-        this.st_id = part1;
-        this.node_nm = part2;
-        this.st_nm = part3;
+    public MetroSriVO(String node_id, String st_id, String node_nm, String st_nm) {
+        this.node_id = node_id;
+        this.st_id = st_id;
+        this.node_nm = node_nm;
+        this.st_nm = st_nm;
     }
 }

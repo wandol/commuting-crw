@@ -1,5 +1,7 @@
 package kr.co.saramin.lab.commutingcrw.module;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import kr.co.saramin.lab.commutingcrw.constant.Region;
 import kr.co.saramin.lab.commutingcrw.vo.*;
 import lombok.RequiredArgsConstructor;
@@ -12,6 +14,7 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 import java.io.*;
+import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -43,6 +46,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class MakeRawData {
 
+    private static final String SUBWAY_PRE_PATH = "/Users/user/commuting/2025/final";
     private static final String ALL_SUBWAY = "subway.json";
     private static final String BUSAN_SUBWAY = "subway_busan.json";
     private static final String DAEJEON_SUBWAY = "subway_daejeon.json";
@@ -53,7 +57,9 @@ public class MakeRawData {
 
     private final DataIoService dataIoService;
     private final SubwayDataProcessor subwayDataProcessor;
+    private final KakaoApiClient kakaoApiClient;
     private final CommutingRouteService commutingRouteService;
+    private final Gson gson = new Gson();
 
     static {
         // SSL 인증서 검증을 우회하기 위한 초기화 (개발 환경에서만 사용 권장, 프로덕션에서는 보안 강화 필요)
@@ -118,7 +124,7 @@ public class MakeRawData {
      *  통근데이터 파일 체크.
      */
     @SneakyThrows
-    private void checkCommutingFile() {
+    public void checkCommutingFile() {
         String[] regions = {"busan","daejeon","daegu","gwangju"};
         for (String region : regions) {
             List<SubwayVo> stationList = dataIoService.loadSubwayMeta("subway_etc.json")
@@ -178,12 +184,9 @@ public class MakeRawData {
      * 출력: routes/{st_id}_routes.json
      */
     @SneakyThrows
-    private void makeCommuting() {
+    public void makeCommuting(String subwayFile, Region region) {
         // 지하철 메타데이터 로드 (테스트 파일 사용 가능)
-        List<SubwayVo> stationList = dataIoService.loadSubwayMeta("subway_etc.json")
-                .stream()
-                .filter(m -> "daegu".equals(m.getRegion()))
-                .collect(Collectors.toList()); // 또는 ALL_SUBWAY 사용
+        List<SubwayVo> stationList = dataIoService.loadSubwayMeta(subwayFile);
 
         // 모든 역 정보를 맵으로 변환 (external_id 기준)
         Map<String, Subway> stationMap = stationList.stream()
@@ -199,29 +202,28 @@ public class MakeRawData {
             for (SubwayVo fromVo : stationList) {
                 List<CommutingAllData> results = new ArrayList<>();
                 Subway from = fromVo.getInfo().get(0);
-//                if(checkCommutingFile(from)){
-                    for (SubwayVo toVo : stationList) {
-                        Subway to = toVo.getInfo().get(0);
-                        if (!from.getExternal_id().equals(to.getExternal_id())) {
-                            try {
-                                CommutingAllData result = commutingRouteService.processRoute(from, to, stationMap, "daegu");
-                                if (result != null) {
-                                    results.add(result);
-                                } else {
-                                    errorLog.write(String.join(",", "[PROCESS FAIL]", from.getExternal_id(), to.getExternal_id()) + "\n");
-                                }
-                            } catch (Exception e) {
-                                errorLog.write(String.join(",", "[EXCEPTION]", from.getExternal_id(), to.getExternal_id(), e.getMessage()) + "\n");
-                                log.error("통근 경로 처리 중 오류: from={}, to={}, error={}", from.getSt_nm(), to.getSt_nm(), e.getMessage(), e);
+                for (SubwayVo toVo : stationList) {
+                    Subway to = toVo.getInfo().get(0);
+                    if (!from.getExternal_id().equals(to.getExternal_id())) {
+                        try {
+                            CommutingAllData result = commutingRouteService.processRoute(from, to, stationMap, region.name());
+                            if (result != null) {
+                                results.add(result);
+                            } else {
+                                errorLog.write(String.join(",", "[PROCESS FAIL]", from.getExternal_id(), to.getExternal_id()) + "\n");
                             }
+                        } catch (Exception e) {
+                            errorLog.write(String.join(",", "[EXCEPTION]", from.getExternal_id(), to.getExternal_id(), e.getMessage()) + "\n");
+                            log.error("통근 경로 처리 중 오류: from={}, to={}, error={}", from.getSt_nm(), to.getSt_nm(), e.getMessage(), e);
                         }
-                        Thread.sleep(200);
                     }
+                    Thread.sleep(200);
+                }
 
-                    // 결과 JSON 쓰기
-                    Path outputPath = Paths.get("/Users/wandol/commuting/routes_daegu", from.getSt_id() + "_routes.json");
-                    dataIoService.writeJson(outputPath.toString(), results);
-//                }
+                String commutingPrePath = SUBWAY_PRE_PATH + "/routes_" + region.name();
+                // 결과 JSON 쓰기
+                Path outputPath = Paths.get(commutingPrePath, from.getSt_id() + "_routes.json");
+                dataIoService.writeJson(outputPath.toString(), results);
             }
         }
     }
@@ -229,7 +231,7 @@ public class MakeRawData {
     /**
      *  기분석된 결과가 있으면 pass
      */
-    private boolean checkCommutingFile(Subway from) {
+    public boolean checkCommutingFile(Subway from) {
         try {
             // 파일 경로 생성
             Path filePath = Paths.get("/Users/wandol/commuting/routes_daegu", from.getSt_id() + "_routes.json");
@@ -256,7 +258,7 @@ public class MakeRawData {
      * 최종 지하철 원천 파일의 빈 데이터를 검증합니다.
      * 빈 필드가 있는 레코드를 로그로 출력.
      */
-    private void fileCheck(String fileName) {
+    public void fileCheck(String fileName) {
         List<MetroSriVO> stationList = dataIoService.readCsv(fileName,
                 parts -> new MetroSriVO(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]));
 
@@ -269,4 +271,69 @@ public class MakeRawData {
             }
         }
     }
+
+    @SneakyThrows
+    public void newSubwayAppend(Region region, String jsonFile, MetroSriVO subwayData) {
+        final Path path = Paths.get(jsonFile);
+        final String now = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
+
+        // 1. 기존 JSON 데이터 로딩
+        List<SubwayVo> existingList = loadExistingSubwayList(path);
+
+        // 2. Kakao API로 좌표 조회
+        KakaoApiResponse.Document doc = kakaoApiClient.fetchSubwayCoordinates(subwayData)
+                .orElseThrow(() -> new IllegalStateException("좌표 조회 실패: " + subwayData.getSt_nm()));
+        String ogId = kakaoApiClient.extractOgUrlId(doc.place_url).orElse("");
+
+        // 3. Subway 객체 생성
+        Subway newSubway = createSubway(subwayData, doc, ogId);
+
+        // 4. 기존 환승역 여부 검사 및 추가
+        boolean isMerged = existingList.stream()
+                .filter(vo -> vo.getSt_nm().equals(subwayData.getSt_nm()))
+                .findFirst()
+                .map(vo -> vo.getInfo().add(newSubway))
+                .orElse(false);
+
+        // 5. 신규 역이면 SubwayVo 생성 후 추가
+        if (!isMerged) {
+            SubwayVo newVo = new SubwayVo();
+            newVo.setSt_nm(subwayData.getSt_nm());
+            newVo.set_transfer(false); // 최초 추가는 단일 info이므로 false
+            newVo.setInfo(new ArrayList<>(List.of(newSubway)));
+            newVo.setRegion(region.name());
+            newVo.setReg_dt(now);
+            newVo.setUp_dt(now);
+            existingList.add(newVo);
+        }
+
+        // 6. JSON 저장
+        dataIoService.writeJson(jsonFile, existingList);
+        log.info("Subway 데이터 추가 완료: st_nm={}, node_nm={}", subwayData.getSt_nm(), subwayData.getNode_nm());
+    }
+
+    private List<SubwayVo> loadExistingSubwayList(Path path) {
+        if (!Files.exists(path)) return new ArrayList<>();
+
+        try (Reader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
+            Type listType = new TypeToken<List<SubwayVo>>() {}.getType();
+            return gson.fromJson(reader, listType);
+        } catch (Exception e) {
+            log.warn("기존 JSON 파싱 실패: {}", e.getMessage());
+            return new ArrayList<>();
+        }
+    }
+
+    private Subway createSubway(MetroSriVO data, KakaoApiResponse.Document doc, String ogId) {
+        Subway subway = new Subway();
+        subway.setNode_id(data.getNode_id());
+        subway.setSt_id(data.getSt_id());
+        subway.setNode_nm(data.getNode_nm());
+        subway.setSt_nm(data.getSt_nm());
+        subway.setCoords(new Coords(doc.x, doc.y));
+        subway.setExternal_id(ogId);
+        return subway;
+    }
+
+
 }
