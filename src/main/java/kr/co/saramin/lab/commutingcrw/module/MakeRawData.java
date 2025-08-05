@@ -1,8 +1,5 @@
 package kr.co.saramin.lab.commutingcrw.module;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.reflect.TypeToken;
 import kr.co.saramin.lab.commutingcrw.constant.Region;
 import kr.co.saramin.lab.commutingcrw.vo.*;
 import lombok.RequiredArgsConstructor;
@@ -47,7 +44,10 @@ import java.util.stream.Collectors;
 public class MakeRawData {
 
     private static final String ALL_SUBWAY = "subway.json";
-    private static final String ETC_SUBWAY = "subway_etc.json";
+    private static final String BUSAN_SUBWAY = "subway_busan.json";
+    private static final String DAEJEON_SUBWAY = "subway_daejeon.json";
+    private static final String DAEGU_SUBWAY = "subway_daegu.json";
+    private static final String GWANGJU_SUBWAY = "subway_gwangju.json";
     private static final String METRO_DATA = "metro_sri_coord.csv";
     private static final String ETC_DATA = "etc_sri_coord.csv";
 
@@ -99,15 +99,38 @@ public class MakeRawData {
         // 전체 지하철 JSON 파일 생성
         //  csv ->  json (최종파일로 es 색인용)
 //         makeSubwayAll(METRO_DATA,ALL_SUBWAY);
-//        makeSubwayAll(ETC_DATA,ETC_SUBWAY);
+//        makeSubwayAll(ETC_DATA,DAEGU_SUBWAY, "5");
+//        makeSubwayAll(ETC_DATA,BUSAN_SUBWAY, "4");
+//        makeSubwayAll(ETC_DATA,DAEJEON_SUBWAY, "8");
+//        makeSubwayAll(ETC_DATA,GWANGJU_SUBWAY, "6");
 
         // 통근 경로 데이터 생성
-        makeCommuting();
+//        makeCommuting();
 
-
+        //  통근파일 체크
+//        checkCommutingFile();
 
         //  output file 검증
 //        dataIoService.validateCommutingData();
+    }
+
+    /**
+     *  통근데이터 파일 체크.
+     */
+    @SneakyThrows
+    private void checkCommutingFile() {
+        String[] regions = {"busan","daejeon","daegu","gwangju"};
+        for (String region : regions) {
+            List<SubwayVo> stationList = dataIoService.loadSubwayMeta("subway_etc.json")
+                    .stream().filter(subwayVo -> region.equals(subwayVo.getRegion()))
+                    .collect(Collectors.toList());
+            String filepath = "/Users/user/commuting/2025/final" + "/routes_" + region;
+            int folderFileCnt = dataIoService.countJsonFiles(filepath);
+            log.info("region : {}, 총 지하철역 건수 : {}, 통근데이터 파일건수 : {}", region, stationList.size(), folderFileCnt);
+            //  폴더별 각 파일의 건수체크
+            dataIoService.validateCommutingJsonPath(filepath);
+        }
+
     }
 
     /**
@@ -116,7 +139,7 @@ public class MakeRawData {
      * 출력: subway.json
      */
     @SneakyThrows
-    public void makeSubwayAll(String fileName, String outputFileName) {
+    public void makeSubwayAll(String fileName, String outputFileName, String region) {
         // 좌표 데이터 로드
         List<Subway> records = dataIoService.readCsv(fileName, parts -> Subway.builder()
                 .node_id(parts[0])
@@ -125,7 +148,7 @@ public class MakeRawData {
                 .st_nm(parts[3])
                 .coords(new Coords(parts[5], parts[4]))
                 .external_id(parts[6])
-                .build());
+                .build()).stream().filter(m -> m.getNode_id().startsWith(region)).collect(Collectors.toList());
 
         // st_nm 기준으로 그룹핑하여 SubwayVo 생성
         Map<String, List<Subway>> grouped = records.stream()

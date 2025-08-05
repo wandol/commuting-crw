@@ -1,0 +1,1795 @@
+[
+  {
+    "st_nm": "반고개",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50215",
+        "node_nm": "대구 2호선",
+        "st_nm": "반고개",
+        "coords": {
+          "lat": "35.8622521621908",
+          "lon": "128.572719232126"
+        },
+        "external_id": "DGS228"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "공단",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50311",
+        "node_nm": "대구 3호선",
+        "st_nm": "공단",
+        "coords": {
+          "lat": "35.8919827045671",
+          "lon": "128.553616577774"
+        },
+        "external_id": "DGS311"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "수성시장",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50323",
+        "node_nm": "대구 3호선",
+        "st_nm": "수성시장",
+        "coords": {
+          "lat": "35.8543238441176",
+          "lon": "128.616038217575"
+        },
+        "external_id": "DGS323"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "팔달시장",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50313",
+        "node_nm": "대구 3호선",
+        "st_nm": "팔달시장",
+        "coords": {
+          "lat": "35.8888415481729",
+          "lon": "128.567880684049"
+        },
+        "external_id": "DGS313"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "칠곡운암",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50305",
+        "node_nm": "대구 3호선",
+        "st_nm": "칠곡운암",
+        "coords": {
+          "lat": "35.9314624364377",
+          "lon": "128.554539499622"
+        },
+        "external_id": "DGS305"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "대명",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50123",
+        "node_nm": "대구 1호선",
+        "st_nm": "대명",
+        "coords": {
+          "lat": "35.8393253088268",
+          "lon": "128.565944864274"
+        },
+        "external_id": "DGS124"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "방촌",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50107",
+        "node_nm": "대구 1호선",
+        "st_nm": "방촌",
+        "coords": {
+          "lat": "35.879640495861686",
+          "lon": "128.67017529155623"
+        },
+        "external_id": "DGS140"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "매천시장",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50309",
+        "node_nm": "대구 3호선",
+        "st_nm": "매천시장",
+        "coords": {
+          "lat": "35.9043687510623",
+          "lon": "128.545741973708"
+        },
+        "external_id": "DGS309"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "송현",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50125",
+        "node_nm": "대구 1호선",
+        "st_nm": "송현",
+        "coords": {
+          "lat": "35.8310389735877",
+          "lon": "128.551723656305"
+        },
+        "external_id": "DGS122"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "신매",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50222",
+        "node_nm": "대구 2호선",
+        "st_nm": "신매",
+        "coords": {
+          "lat": "35.8408117112752",
+          "lon": "128.705125542668"
+        },
+        "external_id": "DGS240"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "남산",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50319",
+        "node_nm": "대구 3호선",
+        "st_nm": "남산",
+        "coords": {
+          "lat": "35.8566969364077",
+          "lon": "128.583462127899"
+        },
+        "external_id": "DGS319"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "두류",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50212",
+        "node_nm": "대구 2호선",
+        "st_nm": "두류",
+        "coords": {
+          "lat": "35.8572148462546",
+          "lon": "128.555687477795"
+        },
+        "external_id": "DGS226"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "청라언덕",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50231",
+        "node_nm": "대구 2호선",
+        "st_nm": "청라언덕",
+        "coords": {
+          "lat": "35.86489286135085",
+          "lon": "128.58243618642845"
+        },
+        "external_id": "DGS229"
+      },
+      {
+        "node_id": "503",
+        "st_id": "50318",
+        "node_nm": "대구 3호선",
+        "st_nm": "청라언덕",
+        "coords": {
+          "lat": "35.864197913328",
+          "lon": "128.582380299872"
+        },
+        "external_id": "DGS318"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "월촌",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50126",
+        "node_nm": "대구 1호선",
+        "st_nm": "월촌",
+        "coords": {
+          "lat": "35.8237012191661",
+          "lon": "128.545472867668"
+        },
+        "external_id": "DGS121"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "용계",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50106",
+        "node_nm": "대구 1호선",
+        "st_nm": "용계",
+        "coords": {
+          "lat": "35.8761013615665",
+          "lon": "128.682019041156"
+        },
+        "external_id": "DGS141"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "신천",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50113",
+        "node_nm": "대구 1호선",
+        "st_nm": "신천",
+        "coords": {
+          "lat": "35.8746867238902",
+          "lon": "128.617860126635"
+        },
+        "external_id": "DGS134"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "황금",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50326",
+        "node_nm": "대구 3호선",
+        "st_nm": "황금",
+        "coords": {
+          "lat": "35.8390783843098",
+          "lon": "128.623918523675"
+        },
+        "external_id": "DGS326"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "수성구민운동장",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50324",
+        "node_nm": "대구 3호선",
+        "st_nm": "수성구민운동장",
+        "coords": {
+          "lat": "35.8524169408054",
+          "lon": "128.625129180117"
+        },
+        "external_id": "DGS324"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "교대",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50119",
+        "node_nm": "대구 1호선",
+        "st_nm": "교대",
+        "coords": {
+          "lat": "35.8506517193906",
+          "lon": "128.590580870154"
+        },
+        "external_id": "DGS128"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "원대",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50314",
+        "node_nm": "대구 3호선",
+        "st_nm": "원대",
+        "coords": {
+          "lat": "35.8878448262803",
+          "lon": "128.574359233514"
+        },
+        "external_id": "DGS314"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "율하",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50105",
+        "node_nm": "대구 1호선",
+        "st_nm": "율하",
+        "coords": {
+          "lat": "35.8698017965623",
+          "lon": "128.692713541869"
+        },
+        "external_id": "DGS142"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "반야월",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50103",
+        "node_nm": "대구 1호선",
+        "st_nm": "반야월",
+        "coords": {
+          "lat": "35.86596683682594",
+          "lon": "128.71360316643197"
+        },
+        "external_id": "DGS144"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "설화명곡",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50132",
+        "node_nm": "대구 1호선",
+        "st_nm": "설화명곡",
+        "coords": {
+          "lat": "35.79871751927962",
+          "lon": "128.48936186250194"
+        },
+        "external_id": "DGS1M129"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "용지",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50330",
+        "node_nm": "대구 3호선",
+        "st_nm": "용지",
+        "coords": {
+          "lat": "35.8182678027764",
+          "lon": "128.646534534337"
+        },
+        "external_id": "DGS330"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "매천",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50308",
+        "node_nm": "대구 3호선",
+        "st_nm": "매천",
+        "coords": {
+          "lat": "35.9126784247052",
+          "lon": "128.543413422111"
+        },
+        "external_id": "DGS308"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "사월",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50218",
+        "node_nm": "대구 2호선",
+        "st_nm": "사월",
+        "coords": {
+          "lat": "35.83703160646826",
+          "lon": "128.71530783739777"
+        },
+        "external_id": "DGS241"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "수성못",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50327",
+        "node_nm": "대구 3호선",
+        "st_nm": "수성못",
+        "coords": {
+          "lat": "35.8313560544497",
+          "lon": "128.623216677973"
+        },
+        "external_id": "DGS327"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "태전",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50307",
+        "node_nm": "대구 3호선",
+        "st_nm": "태전",
+        "coords": {
+          "lat": "35.9196484719641",
+          "lon": "128.547426311675"
+        },
+        "external_id": "DGS307"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "대구역",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50115",
+        "node_nm": "대구 1호선",
+        "st_nm": "대구역",
+        "coords": {
+          "lat": "35.87632871633905",
+          "lon": "128.59704770331416"
+        },
+        "external_id": "DGS132"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "범어",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50217",
+        "node_nm": "대구 2호선",
+        "st_nm": "범어",
+        "coords": {
+          "lat": "35.859019444441",
+          "lon": "128.626804891905"
+        },
+        "external_id": "DGS233"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "대구은행",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50210",
+        "node_nm": "대구 2호선",
+        "st_nm": "대구은행",
+        "coords": {
+          "lat": "35.8597628015782",
+          "lon": "128.61411950785075"
+        },
+        "external_id": "DGS232"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "감삼",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50201",
+        "node_nm": "대구 2호선",
+        "st_nm": "감삼",
+        "coords": {
+          "lat": "35.85430901539491",
+          "lon": "128.548124584983"
+        },
+        "external_id": "DGS225"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "안심",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50101",
+        "node_nm": "대구 1호선",
+        "st_nm": "안심",
+        "coords": {
+          "lat": "35.8712130165849",
+          "lon": "128.733769742803"
+        },
+        "external_id": "DGS146"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "죽전",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50226",
+        "node_nm": "대구 2호선",
+        "st_nm": "죽전",
+        "coords": {
+          "lat": "35.85027804918893",
+          "lon": "128.53760834986548"
+        },
+        "external_id": "DGS224"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "범물",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50329",
+        "node_nm": "대구 3호선",
+        "st_nm": "범물",
+        "coords": {
+          "lat": "35.820839170227",
+          "lon": "128.640112691676"
+        },
+        "external_id": "DGS329"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "용산",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50224",
+        "node_nm": "대구 2호선",
+        "st_nm": "용산",
+        "coords": {
+          "lat": "35.8490710634655",
+          "lon": "128.528808727588"
+        },
+        "external_id": "DGS223"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "수성구청",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50221",
+        "node_nm": "대구 2호선",
+        "st_nm": "수성구청",
+        "coords": {
+          "lat": "35.8588057624788",
+          "lon": "128.635638667651"
+        },
+        "external_id": "DGS234"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "달성공원",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50316",
+        "node_nm": "대구 3호선",
+        "st_nm": "달성공원",
+        "coords": {
+          "lat": "35.87568940521206",
+          "lon": "128.5820995235442"
+        },
+        "external_id": "DGS316"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "계명대",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50204",
+        "node_nm": "대구 2호선",
+        "st_nm": "계명대",
+        "coords": {
+          "lat": "35.8515182536424",
+          "lon": "128.491849809882"
+        },
+        "external_id": "DGS220"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "진천",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50129",
+        "node_nm": "대구 1호선",
+        "st_nm": "진천",
+        "coords": {
+          "lat": "35.8138797140673",
+          "lon": "128.523079769978"
+        },
+        "external_id": "DGS118"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "팔달",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50310",
+        "node_nm": "대구 3호선",
+        "st_nm": "팔달",
+        "coords": {
+          "lat": "35.8978386982277",
+          "lon": "128.546749099511"
+        },
+        "external_id": "DGS310"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "건들바위",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50321",
+        "node_nm": "대구 3호선",
+        "st_nm": "건들바위",
+        "coords": {
+          "lat": "35.8553896143222",
+          "lon": "128.599699303506"
+        },
+        "external_id": "DGS321"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "월배",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50128",
+        "node_nm": "대구 1호선",
+        "st_nm": "월배",
+        "coords": {
+          "lat": "35.8161802095518",
+          "lon": "128.53039944745"
+        },
+        "external_id": "DGS119"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "고산",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50205",
+        "node_nm": "대구 2호선",
+        "st_nm": "고산",
+        "coords": {
+          "lat": "35.8429442127885",
+          "lon": "128.693244868779"
+        },
+        "external_id": "DGS239"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "동촌",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50109",
+        "node_nm": "대구 1호선",
+        "st_nm": "동촌",
+        "coords": {
+          "lat": "35.8860685418711",
+          "lon": "128.650275999718"
+        },
+        "external_id": "DGS138"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "팔거",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50303",
+        "node_nm": "대구 3호선",
+        "st_nm": "팔거",
+        "coords": {
+          "lat": "35.9440507618416",
+          "lon": "128.558336690689"
+        },
+        "external_id": "DGS303"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "학정",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50302",
+        "node_nm": "대구 3호선",
+        "st_nm": "학정",
+        "coords": {
+          "lat": "35.95155860524859",
+          "lon": "128.55920232907923"
+        },
+        "external_id": "DGS302"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "영대병원",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50120",
+        "node_nm": "대구 1호선",
+        "st_nm": "영대병원",
+        "coords": {
+          "lat": "35.8441641859564",
+          "lon": "128.588073922024"
+        },
+        "external_id": "DGS127"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "칠곡경대병원",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50301",
+        "node_nm": "대구 3호선",
+        "st_nm": "칠곡경대병원",
+        "coords": {
+          "lat": "35.9583910233172",
+          "lon": "128.559895264986"
+        },
+        "external_id": "DGS301"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "신기",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50104",
+        "node_nm": "대구 1호선",
+        "st_nm": "신기",
+        "coords": {
+          "lat": "35.866697748321876",
+          "lon": "128.7018717008197"
+        },
+        "external_id": "DGS143"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "정평",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50228",
+        "node_nm": "대구 2호선",
+        "st_nm": "정평",
+        "coords": {
+          "lat": "35.8340447735875",
+          "lon": "128.728671269463"
+        },
+        "external_id": "DGS242"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "문양",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50214",
+        "node_nm": "대구 2호선",
+        "st_nm": "문양",
+        "coords": {
+          "lat": "35.8641579148789",
+          "lon": "128.437002637504"
+        },
+        "external_id": "DGS216"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "대공원",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50209",
+        "node_nm": "대구 2호선",
+        "st_nm": "대공원",
+        "coords": {
+          "lat": "35.84269870525034",
+          "lon": "128.67998634310348"
+        },
+        "external_id": "DGS238"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "해안",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50108",
+        "node_nm": "대구 1호선",
+        "st_nm": "해안",
+        "coords": {
+          "lat": "35.883546382084",
+          "lon": "128.659618182185"
+        },
+        "external_id": "DGS139"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "상인",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50127",
+        "node_nm": "대구 1호선",
+        "st_nm": "상인",
+        "coords": {
+          "lat": "35.8189266589744",
+          "lon": "128.537763550346"
+        },
+        "external_id": "DGS120"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "대봉교",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50322",
+        "node_nm": "대구 3호선",
+        "st_nm": "대봉교",
+        "coords": {
+          "lat": "35.855001346752566",
+          "lon": "128.60637516764342"
+        },
+        "external_id": "DGS322"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "연호",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50223",
+        "node_nm": "대구 2호선",
+        "st_nm": "연호",
+        "coords": {
+          "lat": "35.8465875965262",
+          "lon": "128.67168212651"
+        },
+        "external_id": "DGS237"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "내당",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50206",
+        "node_nm": "대구 2호선",
+        "st_nm": "내당",
+        "coords": {
+          "lat": "35.8601228229147",
+          "lon": "128.564640260301"
+        },
+        "external_id": "DGS227"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "서부정류장",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50124",
+        "node_nm": "대구 1호선",
+        "st_nm": "서부정류장",
+        "coords": {
+          "lat": "35.8371825987976",
+          "lon": "128.557190858302"
+        },
+        "external_id": "DGS123"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "만촌",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50213",
+        "node_nm": "대구 2호선",
+        "st_nm": "만촌",
+        "coords": {
+          "lat": "35.8588579996533",
+          "lon": "128.644747980508"
+        },
+        "external_id": "DGS235"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "각산",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50102",
+        "node_nm": "대구 1호선",
+        "st_nm": "각산",
+        "coords": {
+          "lat": "35.86799440106771",
+          "lon": "128.72424172030216"
+        },
+        "external_id": "DGS145"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "강창",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50202",
+        "node_nm": "대구 2호선",
+        "st_nm": "강창",
+        "coords": {
+          "lat": "35.8530815302455",
+          "lon": "128.47852956757"
+        },
+        "external_id": "DGS219"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "다사",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50207",
+        "node_nm": "대구 2호선",
+        "st_nm": "다사",
+        "coords": {
+          "lat": "35.8648265376596",
+          "lon": "128.458390514465"
+        },
+        "external_id": "DGS217"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "아양교",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50110",
+        "node_nm": "대구 1호선",
+        "st_nm": "아양교",
+        "coords": {
+          "lat": "35.8872016497293",
+          "lon": "128.639921198411"
+        },
+        "external_id": "DGS137"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "북구청",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50315",
+        "node_nm": "대구 3호선",
+        "st_nm": "북구청",
+        "coords": {
+          "lat": "35.88374367155882",
+          "lon": "128.58142701792312"
+        },
+        "external_id": "DGS315"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "동구청",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50111",
+        "node_nm": "대구 1호선",
+        "st_nm": "동구청",
+        "coords": {
+          "lat": "35.88404111242941",
+          "lon": "128.63193638012677"
+        },
+        "external_id": "DGS136"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "영남대",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50230",
+        "node_nm": "대구 2호선",
+        "st_nm": "영남대",
+        "coords": {
+          "lat": "35.8362116642388",
+          "lon": "128.752763532"
+        },
+        "external_id": "DGS244"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "안지랑",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50122",
+        "node_nm": "대구 1호선",
+        "st_nm": "안지랑",
+        "coords": {
+          "lat": "35.8392307420216",
+          "lon": "128.573734314089"
+        },
+        "external_id": "DGS125"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "화원",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50131",
+        "node_nm": "대구 1호선",
+        "st_nm": "화원",
+        "coords": {
+          "lat": "35.8044715972212",
+          "lon": "128.500726490573"
+        },
+        "external_id": "DGS1M128"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "명덕",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50118",
+        "node_nm": "대구 1호선",
+        "st_nm": "명덕",
+        "coords": {
+          "lat": "35.857826850760546",
+          "lon": "128.59110945231205"
+        },
+        "external_id": "DGS129"
+      },
+      {
+        "node_id": "503",
+        "st_id": "50320",
+        "node_nm": "대구 3호선",
+        "st_nm": "명덕",
+        "coords": {
+          "lat": "35.85695233113235",
+          "lon": "128.59005142775288"
+        },
+        "external_id": "DGS320"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "반월당",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50117",
+        "node_nm": "대구 1호선",
+        "st_nm": "반월당",
+        "coords": {
+          "lat": "35.86449822913336",
+          "lon": "128.59333739255734"
+        },
+        "external_id": "DGS130"
+      },
+      {
+        "node_id": "502",
+        "st_id": "50227",
+        "node_nm": "대구 2호선",
+        "st_nm": "반월당",
+        "coords": {
+          "lat": "35.865457605444135",
+          "lon": "128.59356694578094"
+        },
+        "external_id": "DGS230"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "칠성시장",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50114",
+        "node_nm": "대구 1호선",
+        "st_nm": "칠성시장",
+        "coords": {
+          "lat": "35.8761010648655",
+          "lon": "128.605133646666"
+        },
+        "external_id": "DGS133"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "지산",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50328",
+        "node_nm": "대구 3호선",
+        "st_nm": "지산",
+        "coords": {
+          "lat": "35.825153218139",
+          "lon": "128.631951304556"
+        },
+        "external_id": "DGS328"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "만평",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50312",
+        "node_nm": "대구 3호선",
+        "st_nm": "만평",
+        "coords": {
+          "lat": "35.88983602273649",
+          "lon": "128.56106304973693"
+        },
+        "external_id": "DGS312"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "담티",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50208",
+        "node_nm": "대구 2호선",
+        "st_nm": "담티",
+        "coords": {
+          "lat": "35.8547807171623",
+          "lon": "128.653975174296"
+        },
+        "external_id": "DGS236"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "현충로",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50121",
+        "node_nm": "대구 1호선",
+        "st_nm": "현충로",
+        "coords": {
+          "lat": "35.8409494737259",
+          "lon": "128.581471198973"
+        },
+        "external_id": "DGS126"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "어린이세상",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50325",
+        "node_nm": "대구 3호선",
+        "st_nm": "어린이세상",
+        "coords": {
+          "lat": "35.84517079454568",
+          "lon": "128.62446775125383"
+        },
+        "external_id": "DGS325"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "임당",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50229",
+        "node_nm": "대구 2호선",
+        "st_nm": "임당",
+        "coords": {
+          "lat": "35.83412938415609",
+          "lon": "128.74084813804066"
+        },
+        "external_id": "DGS243"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "대실",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50211",
+        "node_nm": "대구 2호선",
+        "st_nm": "대실",
+        "coords": {
+          "lat": "35.8576058595846",
+          "lon": "128.465249990912"
+        },
+        "external_id": "DGS218"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "동천",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50304",
+        "node_nm": "대구 3호선",
+        "st_nm": "동천",
+        "coords": {
+          "lat": "35.9377101876855",
+          "lon": "128.556683022262"
+        },
+        "external_id": "DGS304"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "이곡",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50225",
+        "node_nm": "대구 2호선",
+        "st_nm": "이곡",
+        "coords": {
+          "lat": "35.85059490342399",
+          "lon": "128.5157955477842"
+        },
+        "external_id": "DGS222"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "대곡",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50130",
+        "node_nm": "대구 1호선",
+        "st_nm": "대곡",
+        "coords": {
+          "lat": "35.8095726496598",
+          "lon": "128.512766290689"
+        },
+        "external_id": "DGS117"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "서문시장",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50317",
+        "node_nm": "대구 3호선",
+        "st_nm": "서문시장",
+        "coords": {
+          "lat": "35.8696678378541",
+          "lon": "128.582245500572"
+        },
+        "external_id": "DGS317"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "성서산업단지",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50220",
+        "node_nm": "대구 2호선",
+        "st_nm": "성서산업단지",
+        "coords": {
+          "lat": "35.8517148505664",
+          "lon": "128.507000383565"
+        },
+        "external_id": "DGS221"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "구암",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "503",
+        "st_id": "50306",
+        "node_nm": "대구 3호선",
+        "st_nm": "구암",
+        "coords": {
+          "lat": "35.9257457718174",
+          "lon": "128.550345968157"
+        },
+        "external_id": "DGS306"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "동대구역",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50112",
+        "node_nm": "대구 1호선",
+        "st_nm": "동대구역",
+        "coords": {
+          "lat": "35.87755434756526",
+          "lon": "128.62791465030097"
+        },
+        "external_id": "DGS135"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "경대병원",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "502",
+        "st_id": "50203",
+        "node_nm": "대구 2호선",
+        "st_nm": "경대병원",
+        "coords": {
+          "lat": "35.863145404232455",
+          "lon": "128.6029028791839"
+        },
+        "external_id": "DGS231"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  },
+  {
+    "st_nm": "중앙로",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "501",
+        "st_id": "50116",
+        "node_nm": "대구 1호선",
+        "st_nm": "중앙로",
+        "coords": {
+          "lat": "35.87085454444516",
+          "lon": "128.59397506943253"
+        },
+        "external_id": "DGS131"
+      }
+    ],
+    "region": "daegu",
+    "reg_dt": "20250805112628",
+    "up_dt": "20250805112628"
+  }
+]

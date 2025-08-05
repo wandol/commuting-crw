@@ -1,0 +1,3036 @@
+[
+  {
+    "st_nm": "동원",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40203",
+        "node_nm": "부산 2호선",
+        "st_nm": "동원",
+        "coords": {
+          "lat": "35.2586448319904",
+          "lon": "129.012410550189"
+        },
+        "external_id": "PSS237"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "일광",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40614",
+        "node_nm": "동해선",
+        "st_nm": "일광",
+        "coords": {
+          "lat": "35.26758119584539",
+          "lon": "129.23309285186517"
+        },
+        "external_id": "PSS11M157"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "공항",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40504",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "공항",
+        "coords": {
+          "lat": "35.1719085341638",
+          "lon": "128.948563729722"
+        },
+        "external_id": "PSS1004"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "물만골",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "403",
+        "st_id": "40309",
+        "node_nm": "부산 3호선",
+        "st_nm": "물만골",
+        "coords": {
+          "lat": "35.1767970911539",
+          "lon": "129.0857095864"
+        },
+        "external_id": "PSS304"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "부산대",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40128",
+        "node_nm": "부산 1호선",
+        "st_nm": "부산대",
+        "coords": {
+          "lat": "35.22964948660202",
+          "lon": "129.08942537773808"
+        },
+        "external_id": "PSS128"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "구포",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "403",
+        "st_id": "40303",
+        "node_nm": "부산 3호선",
+        "st_nm": "구포",
+        "coords": {
+          "lat": "35.2066183302771",
+          "lon": "128.996342494032"
+        },
+        "external_id": "PSS314"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "대저",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "403",
+        "st_id": "40305",
+        "node_nm": "부산 3호선",
+        "st_nm": "대저",
+        "coords": {
+          "lat": "35.2133137085415",
+          "lon": "128.960972949281"
+        },
+        "external_id": "PSS317"
+      },
+      {
+        "node_id": "405",
+        "st_id": "40507",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "대저",
+        "coords": {
+          "lat": "35.2130452646571",
+          "lon": "128.960632678445"
+        },
+        "external_id": "PSS1007"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "민락",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40233",
+        "node_nm": "부산 2호선",
+        "st_nm": "민락",
+        "coords": {
+          "lat": "35.1670631931086",
+          "lon": "129.122097073991"
+        },
+        "external_id": "PSS207"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "서대신",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40107",
+        "node_nm": "부산 1호선",
+        "st_nm": "서대신",
+        "coords": {
+          "lat": "35.11091202151769",
+          "lon": "129.01213289704364"
+        },
+        "external_id": "PSS107"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "센텀시티",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40234",
+        "node_nm": "부산 2호선",
+        "st_nm": "센텀시티",
+        "coords": {
+          "lat": "35.168948888080884",
+          "lon": "129.1317651180283"
+        },
+        "external_id": "PSS206"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "만덕",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "403",
+        "st_id": "40307",
+        "node_nm": "부산 3호선",
+        "st_nm": "만덕",
+        "coords": {
+          "lat": "35.2130037763101",
+          "lon": "129.036274850219"
+        },
+        "external_id": "PSS310"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "남산",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40132",
+        "node_nm": "부산 1호선",
+        "st_nm": "남산",
+        "coords": {
+          "lat": "35.265202901569",
+          "lon": "129.092416924607"
+        },
+        "external_id": "PSS132"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "수로왕릉",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40517",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "수로왕릉",
+        "coords": {
+          "lat": "35.2328195086945",
+          "lon": "128.872164496608"
+        },
+        "external_id": "PSS1017"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "덕포",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40212",
+        "node_nm": "부산 2호선",
+        "st_nm": "덕포",
+        "coords": {
+          "lat": "35.173322543115",
+          "lon": "128.983801941146"
+        },
+        "external_id": "PSS228"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "서동",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "404",
+        "st_id": "40409",
+        "node_nm": "부산 4호선",
+        "st_nm": "서동",
+        "coords": {
+          "lat": "35.2131681497048",
+          "lon": "129.107524541959"
+        },
+        "external_id": "PSS407"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "구서",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40130",
+        "node_nm": "부산 1호선",
+        "st_nm": "구서",
+        "coords": {
+          "lat": "35.2472824601624",
+          "lon": "129.091288325323"
+        },
+        "external_id": "PSS130"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "체육공원",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "403",
+        "st_id": "40317",
+        "node_nm": "부산 3호선",
+        "st_nm": "체육공원",
+        "coords": {
+          "lat": "35.2124735466918",
+          "lon": "128.969425373083"
+        },
+        "external_id": "PSS316"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "양산",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40244",
+        "node_nm": "부산 2호선",
+        "st_nm": "양산",
+        "coords": {
+          "lat": "35.3387498687181",
+          "lon": "129.026444387383"
+        },
+        "external_id": "PSS243"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "수안",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "404",
+        "st_id": "40411",
+        "node_nm": "부산 4호선",
+        "st_nm": "수안",
+        "coords": {
+          "lat": "35.2017370185204",
+          "lon": "129.083848486855"
+        },
+        "external_id": "PSS403"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "부산원동",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40623",
+        "node_nm": "동해선",
+        "st_nm": "부산원동",
+        "coords": {
+          "lat": "35.19362117361153",
+          "lon": "129.11425370467586"
+        },
+        "external_id": "PSS11M226"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "안락",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40606",
+        "node_nm": "동해선",
+        "st_nm": "안락",
+        "coords": {
+          "lat": "35.1960901599745",
+          "lon": "129.100650008395"
+        },
+        "external_id": "PSS11M149"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "종합운동장",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "403",
+        "st_id": "40316",
+        "node_nm": "부산 3호선",
+        "st_nm": "종합운동장",
+        "coords": {
+          "lat": "35.1915543631385",
+          "lon": "129.06742941297"
+        },
+        "external_id": "PSS307"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "금련산",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40230",
+        "node_nm": "부산 2호선",
+        "st_nm": "금련산",
+        "coords": {
+          "lat": "35.14969257761234",
+          "lon": "129.11096146101232"
+        },
+        "external_id": "PSS210"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "사하",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40104",
+        "node_nm": "부산 1호선",
+        "st_nm": "사하",
+        "coords": {
+          "lat": "35.0997677417715",
+          "lon": "128.983395006332"
+        },
+        "external_id": "PSS104"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "태화강",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40622",
+        "node_nm": "동해선",
+        "st_nm": "태화강",
+        "coords": {
+          "lat": "35.5384668597449",
+          "lon": "129.353813033798"
+        },
+        "external_id": "PSS11M255"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "고촌",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "404",
+        "st_id": "40401",
+        "node_nm": "부산 4호선",
+        "st_nm": "고촌",
+        "coords": {
+          "lat": "35.2360135557695",
+          "lon": "129.160475584356"
+        },
+        "external_id": "PSS413"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "동매",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40140",
+        "node_nm": "부산 1호선",
+        "st_nm": "동매",
+        "coords": {
+          "lat": "35.0897562520489",
+          "lon": "128.973526035966"
+        },
+        "external_id": "PSS1M159"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "괘법르네시떼",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40502",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "괘법르네시떼",
+        "coords": {
+          "lat": "35.1632721941138",
+          "lon": "128.977658179095"
+        },
+        "external_id": "PSS1002"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "광안",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40231",
+        "node_nm": "부산 2호선",
+        "st_nm": "광안",
+        "coords": {
+          "lat": "35.157858583447",
+          "lon": "129.113145418291"
+        },
+        "external_id": "PSS209"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "망양",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40619",
+        "node_nm": "동해선",
+        "st_nm": "망양",
+        "coords": {
+          "lat": "35.4565384602724",
+          "lon": "129.287881998539"
+        },
+        "external_id": "PSS11M252"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "부원",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40515",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "부원",
+        "coords": {
+          "lat": "35.2264942365647",
+          "lon": "128.883941949222"
+        },
+        "external_id": "PSS1015"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "남양산",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40221",
+        "node_nm": "부산 2호선",
+        "st_nm": "남양산",
+        "coords": {
+          "lat": "35.3254476866423",
+          "lon": "129.019413640564"
+        },
+        "external_id": "PSS242"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "시청",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40122",
+        "node_nm": "부산 1호선",
+        "st_nm": "시청",
+        "coords": {
+          "lat": "35.1796794732693",
+          "lon": "129.076559083164"
+        },
+        "external_id": "PSS122"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "개운포",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40621",
+        "node_nm": "동해선",
+        "st_nm": "개운포",
+        "coords": {
+          "lat": "35.507913578381476",
+          "lon": "129.32119772539616"
+        },
+        "external_id": "PSS11M254"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "부산진",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40115",
+        "node_nm": "부산 1호선",
+        "st_nm": "부산진",
+        "coords": {
+          "lat": "35.12779789319554",
+          "lon": "129.04786649362282"
+        },
+        "external_id": "PSS115"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "벡스코",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40235",
+        "node_nm": "부산 2호선",
+        "st_nm": "벡스코",
+        "coords": {
+          "lat": "35.16883354225892",
+          "lon": "129.13886798533468"
+        },
+        "external_id": "PSS205"
+      },
+      {
+        "node_id": "406",
+        "st_id": "40609",
+        "node_nm": "동해선",
+        "st_nm": "벡스코",
+        "coords": {
+          "lat": "35.1712399344204",
+          "lon": "129.136705372019"
+        },
+        "external_id": "PSS11M152"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "연지공원",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40519",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "연지공원",
+        "coords": {
+          "lat": "35.2496404839021",
+          "lon": "128.869286266039"
+        },
+        "external_id": "PSS1019"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "남포",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40111",
+        "node_nm": "부산 1호선",
+        "st_nm": "남포",
+        "coords": {
+          "lat": "35.09790554832192",
+          "lon": "129.03473562824252"
+        },
+        "external_id": "PSS111"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "오시리아",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40612",
+        "node_nm": "동해선",
+        "st_nm": "오시리아",
+        "coords": {
+          "lat": "35.1962464517431",
+          "lon": "129.208312848657"
+        },
+        "external_id": "PSS11M155"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "서생",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40617",
+        "node_nm": "동해선",
+        "st_nm": "서생",
+        "coords": {
+          "lat": "35.3462043341884",
+          "lon": "129.293053281476"
+        },
+        "external_id": "PSS11M250"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "월래",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40616",
+        "node_nm": "동해선",
+        "st_nm": "월래",
+        "coords": {
+          "lat": "35.32810166033663",
+          "lon": "129.27671698720778"
+        },
+        "external_id": "PSS11M249"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "기장",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40613",
+        "node_nm": "동해선",
+        "st_nm": "기장",
+        "coords": {
+          "lat": "35.2445519356355",
+          "lon": "129.218862392668"
+        },
+        "external_id": "PSS11M156"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "명륜",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40126",
+        "node_nm": "부산 1호선",
+        "st_nm": "명륜",
+        "coords": {
+          "lat": "35.2125752875352",
+          "lon": "129.079702639717"
+        },
+        "external_id": "PSS126"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "노포",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40134",
+        "node_nm": "부산 1호선",
+        "st_nm": "노포",
+        "coords": {
+          "lat": "35.2838438093648",
+          "lon": "129.09502424558"
+        },
+        "external_id": "PSS134"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "부산역",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40113",
+        "node_nm": "부산 1호선",
+        "st_nm": "부산역",
+        "coords": {
+          "lat": "35.20561606540984",
+          "lon": "129.0784743842795"
+        },
+        "external_id": "PSS113"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "신장림",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40138",
+        "node_nm": "부산 1호선",
+        "st_nm": "신장림",
+        "coords": {
+          "lat": "35.081961734507",
+          "lon": "128.977350698097"
+        },
+        "external_id": "PSS1M160"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "가야",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40219",
+        "node_nm": "부산 2호선",
+        "st_nm": "가야",
+        "coords": {
+          "lat": "35.1559353192489",
+          "lon": "129.043313481032"
+        },
+        "external_id": "PSS221"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "부산대양산캠퍼스",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40245",
+        "node_nm": "부산 2호선",
+        "st_nm": "부산대양산캠퍼스",
+        "coords": {
+          "lat": "35.3168258388166",
+          "lon": "129.013992153753"
+        },
+        "external_id": "PSS241"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "재송",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40607",
+        "node_nm": "동해선",
+        "st_nm": "재송",
+        "coords": {
+          "lat": "35.1880806332915",
+          "lon": "129.120092561969"
+        },
+        "external_id": "PSS11M150"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "동백",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40236",
+        "node_nm": "부산 2호선",
+        "st_nm": "동백",
+        "coords": {
+          "lat": "35.1613367503845",
+          "lon": "129.147990152182"
+        },
+        "external_id": "PSS204"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "전포",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40222",
+        "node_nm": "부산 2호선",
+        "st_nm": "전포",
+        "coords": {
+          "lat": "35.1530881426641",
+          "lon": "129.06538457863"
+        },
+        "external_id": "PSS218"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "중앙",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40112",
+        "node_nm": "부산 1호선",
+        "st_nm": "중앙",
+        "coords": {
+          "lat": "35.10372501690833",
+          "lon": "129.036363969152"
+        },
+        "external_id": "PSS112"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "충렬사",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "404",
+        "st_id": "40414",
+        "node_nm": "부산 4호선",
+        "st_nm": "충렬사",
+        "coords": {
+          "lat": "35.20028345958105",
+          "lon": "129.09788161135464"
+        },
+        "external_id": "PSS405"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "괴정",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40105",
+        "node_nm": "부산 1호선",
+        "st_nm": "괴정",
+        "coords": {
+          "lat": "35.0999358214704",
+          "lon": "128.992487217814"
+        },
+        "external_id": "PSS105"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "평강",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40508",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "평강",
+        "coords": {
+          "lat": "35.2140387478609",
+          "lon": "128.950681581985"
+        },
+        "external_id": "PSS1008"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "서부산유통지구",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40503",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "서부산유통지구",
+        "coords": {
+          "lat": "35.1663703106116",
+          "lon": "128.954910864535"
+        },
+        "external_id": "PSS1003"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "개금",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40217",
+        "node_nm": "부산 2호선",
+        "st_nm": "개금",
+        "coords": {
+          "lat": "35.1532421422541",
+          "lon": "129.020568202069"
+        },
+        "external_id": "PSS223"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "반여농산물시장",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "404",
+        "st_id": "40408",
+        "node_nm": "부산 4호선",
+        "st_nm": "반여농산물시장",
+        "coords": {
+          "lat": "35.2177499579063",
+          "lon": "129.123995882239"
+        },
+        "external_id": "PSS409"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "해운대",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40237",
+        "node_nm": "부산 2호선",
+        "st_nm": "해운대",
+        "coords": {
+          "lat": "35.1636479638612",
+          "lon": "129.158897240251"
+        },
+        "external_id": "PSS203"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "냉정",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40216",
+        "node_nm": "부산 2호선",
+        "st_nm": "냉정",
+        "coords": {
+          "lat": "35.1512560458061",
+          "lon": "129.012118730836"
+        },
+        "external_id": "PSS224"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "범일",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40117",
+        "node_nm": "부산 1호선",
+        "st_nm": "범일",
+        "coords": {
+          "lat": "35.14080317392284",
+          "lon": "129.0593530470863"
+        },
+        "external_id": "PSS117"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "장신대",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40520",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "장신대",
+        "coords": {
+          "lat": "35.2595208230408",
+          "lon": "128.86720149363"
+        },
+        "external_id": "PSS1020"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "두실",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40131",
+        "node_nm": "부산 1호선",
+        "st_nm": "두실",
+        "coords": {
+          "lat": "35.2570169811596",
+          "lon": "129.091371463912"
+        },
+        "external_id": "PSS131"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "남창",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40618",
+        "node_nm": "동해선",
+        "st_nm": "남창",
+        "coords": {
+          "lat": "35.419695183492784",
+          "lon": "129.28221160596573"
+        },
+        "external_id": "PSS11M251"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "좌천",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40116",
+        "node_nm": "부산 1호선",
+        "st_nm": "좌천",
+        "coords": {
+          "lat": "35.1343820073548",
+          "lon": "129.054455383044"
+        },
+        "external_id": "PSS116"
+      },
+      {
+        "node_id": "406",
+        "st_id": "40615",
+        "node_nm": "동해선",
+        "st_nm": "좌천",
+        "coords": {
+          "lat": "35.3118321698097",
+          "lon": "129.245294716051"
+        },
+        "external_id": "PSS11M248"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "하단",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40102",
+        "node_nm": "부산 1호선",
+        "st_nm": "하단",
+        "coords": {
+          "lat": "35.1062385683347",
+          "lon": "128.966786546793"
+        },
+        "external_id": "PSS102"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "토성",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40109",
+        "node_nm": "부산 1호선",
+        "st_nm": "토성",
+        "coords": {
+          "lat": "35.1007852525409",
+          "lon": "129.019785649708"
+        },
+        "external_id": "PSS109"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "송정",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40611",
+        "node_nm": "동해선",
+        "st_nm": "송정",
+        "coords": {
+          "lat": "35.1877667326912",
+          "lon": "129.20208562126"
+        },
+        "external_id": "PSS11M154"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "강서구청",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "403",
+        "st_id": "40301",
+        "node_nm": "부산 3호선",
+        "st_nm": "강서구청",
+        "coords": {
+          "lat": "35.2111798817286",
+          "lon": "128.981986450565"
+        },
+        "external_id": "PSS315"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "구명",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40208",
+        "node_nm": "부산 2호선",
+        "st_nm": "구명",
+        "coords": {
+          "lat": "35.2028092156488",
+          "lon": "128.999556181232"
+        },
+        "external_id": "PSS232"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "등구",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40506",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "등구",
+        "coords": {
+          "lat": "35.196153352934",
+          "lon": "128.963542041197"
+        },
+        "external_id": "PSS1006"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "덕두",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40505",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "덕두",
+        "coords": {
+          "lat": "35.181994167427",
+          "lon": "128.95417861657"
+        },
+        "external_id": "PSS1005"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "사직",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "403",
+        "st_id": "40312",
+        "node_nm": "부산 3호선",
+        "st_nm": "사직",
+        "coords": {
+          "lat": "35.1986215514386",
+          "lon": "129.065193277832"
+        },
+        "external_id": "PSS308"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "사상",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40213",
+        "node_nm": "부산 2호선",
+        "st_nm": "사상",
+        "coords": {
+          "lat": "35.1626895550862",
+          "lon": "128.984408359544"
+        },
+        "external_id": "PSS227"
+      },
+      {
+        "node_id": "405",
+        "st_id": "40501",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "사상",
+        "coords": {
+          "lat": "35.1623284852927",
+          "lon": "128.985984203711"
+        },
+        "external_id": "PSS1001"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "다대포항",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40136",
+        "node_nm": "부산 1호선",
+        "st_nm": "다대포항",
+        "coords": {
+          "lat": "35.0576775626584",
+          "lon": "128.971306868032"
+        },
+        "external_id": "PSS1M163"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "범내골",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40118",
+        "node_nm": "부산 1호선",
+        "st_nm": "범내골",
+        "coords": {
+          "lat": "35.1473134465248",
+          "lon": "129.05924810527"
+        },
+        "external_id": "PSS118"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "부전",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40120",
+        "node_nm": "부산 1호선",
+        "st_nm": "부전",
+        "coords": {
+          "lat": "35.162559450181284",
+          "lon": "129.06294651563462"
+        },
+        "external_id": "PSS120"
+      },
+      {
+        "node_id": "406",
+        "st_id": "40601",
+        "node_nm": "동해선",
+        "st_nm": "부전",
+        "coords": {
+          "lat": "35.1640321323598",
+          "lon": "129.059441356112"
+        },
+        "external_id": "PSS11M144"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "낙민",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "404",
+        "st_id": "40403",
+        "node_nm": "부산 4호선",
+        "st_nm": "낙민",
+        "coords": {
+          "lat": "35.200218916242",
+          "lon": "129.090778955954"
+        },
+        "external_id": "PSS404"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "지게골",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40225",
+        "node_nm": "부산 2호선",
+        "st_nm": "지게골",
+        "coords": {
+          "lat": "35.1355628667805",
+          "lon": "129.074424176843"
+        },
+        "external_id": "PSS215"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "봉황",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40516",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "봉황",
+        "coords": {
+          "lat": "35.2272823463239",
+          "lon": "128.8742777452"
+        },
+        "external_id": "PSS1016"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "배산",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "403",
+        "st_id": "40311",
+        "node_nm": "부산 3호선",
+        "st_nm": "배산",
+        "coords": {
+          "lat": "35.1734942170739",
+          "lon": "129.09558177246"
+        },
+        "external_id": "PSS303"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "안평",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "404",
+        "st_id": "40412",
+        "node_nm": "부산 4호선",
+        "st_nm": "안평",
+        "coords": {
+          "lat": "35.2373686145171",
+          "lon": "129.17176302749"
+        },
+        "external_id": "PSS414"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "가야대",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40521",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "가야대",
+        "coords": {
+          "lat": "35.2668151307555",
+          "lon": "128.864973471686"
+        },
+        "external_id": "PSS1021"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "못골",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40226",
+        "node_nm": "부산 2호선",
+        "st_nm": "못골",
+        "coords": {
+          "lat": "35.1347250910939",
+          "lon": "129.084381118075"
+        },
+        "external_id": "PSS214"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "석대",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "404",
+        "st_id": "40410",
+        "node_nm": "부산 4호선",
+        "st_nm": "석대",
+        "coords": {
+          "lat": "35.2181370268054",
+          "lon": "129.137020635865"
+        },
+        "external_id": "PSS410"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "센텀",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40608",
+        "node_nm": "동해선",
+        "st_nm": "센텀",
+        "coords": {
+          "lat": "35.1795120878211",
+          "lon": "129.124435879898"
+        },
+        "external_id": "PSS11M151"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "율리",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40204",
+        "node_nm": "부산 2호선",
+        "st_nm": "율리",
+        "coords": {
+          "lat": "35.24625350303768",
+          "lon": "129.01286767118953"
+        },
+        "external_id": "PSS236"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "남산정",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "403",
+        "st_id": "40304",
+        "node_nm": "부산 3호선",
+        "st_nm": "남산정",
+        "coords": {
+          "lat": "35.21332375652248",
+          "lon": "129.02375291133384"
+        },
+        "external_id": "PSS311"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "교대",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40124",
+        "node_nm": "부산 1호선",
+        "st_nm": "교대",
+        "coords": {
+          "lat": "35.19578446925463",
+          "lon": "129.07999678024"
+        },
+        "external_id": "PSS124"
+      },
+      {
+        "node_id": "406",
+        "st_id": "40604",
+        "node_nm": "동해선",
+        "st_nm": "교대",
+        "coords": {
+          "lat": "35.1937118187804",
+          "lon": "129.079524574995"
+        },
+        "external_id": "PSS11M147"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "미남",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "403",
+        "st_id": "40310",
+        "node_nm": "부산 3호선",
+        "st_nm": "미남",
+        "coords": {
+          "lat": "35.2054044586102",
+          "lon": "129.067995735318"
+        },
+        "external_id": "PSS309"
+      },
+      {
+        "node_id": "404",
+        "st_id": "40407",
+        "node_nm": "부산 4호선",
+        "st_nm": "미남",
+        "coords": {
+          "lat": "35.20684465674998",
+          "lon": "129.06898858871165"
+        },
+        "external_id": "PSS401"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "구남",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40209",
+        "node_nm": "부산 2호선",
+        "st_nm": "구남",
+        "coords": {
+          "lat": "35.1966903928098",
+          "lon": "128.994852323186"
+        },
+        "external_id": "PSS231"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "다대포해수욕장",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40135",
+        "node_nm": "부산 1호선",
+        "st_nm": "다대포해수욕장",
+        "coords": {
+          "lat": "35.0481605146045",
+          "lon": "128.965782934439"
+        },
+        "external_id": "PSS1M164"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "증산",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40246",
+        "node_nm": "부산 2호선",
+        "st_nm": "증산",
+        "coords": {
+          "lat": "35.30825807382693",
+          "lon": "129.01028817554138"
+        },
+        "external_id": "PSS240"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "화명",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40205",
+        "node_nm": "부산 2호선",
+        "st_nm": "화명",
+        "coords": {
+          "lat": "35.2357925046576",
+          "lon": "129.01386233425"
+        },
+        "external_id": "PSS235"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "망미",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "403",
+        "st_id": "40308",
+        "node_nm": "부산 3호선",
+        "st_nm": "망미",
+        "coords": {
+          "lat": "35.171497899839316",
+          "lon": "129.10831503568375"
+        },
+        "external_id": "PSS302"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "호포",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40201",
+        "node_nm": "부산 2호선",
+        "st_nm": "호포",
+        "coords": {
+          "lat": "35.2808327093335",
+          "lon": "129.017518090893"
+        },
+        "external_id": "PSS239"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "신해운대",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40610",
+        "node_nm": "동해선",
+        "st_nm": "신해운대",
+        "coords": {
+          "lat": "35.1817313965038",
+          "lon": "129.176849316342"
+        },
+        "external_id": "PSS11M153"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "장림",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40139",
+        "node_nm": "부산 1호선",
+        "st_nm": "장림",
+        "coords": {
+          "lat": "35.081961734507",
+          "lon": "128.977350698097"
+        },
+        "external_id": "PSS1M160"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "온천장",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40127",
+        "node_nm": "부산 1호선",
+        "st_nm": "온천장",
+        "coords": {
+          "lat": "35.2202705693472",
+          "lon": "129.086435133803"
+        },
+        "external_id": "PSS127"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "금사",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "404",
+        "st_id": "40402",
+        "node_nm": "부산 4호선",
+        "st_nm": "금사",
+        "coords": {
+          "lat": "35.2157859199559",
+          "lon": "129.1151206096"
+        },
+        "external_id": "PSS408"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "국제금융센터·부산은행",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40247",
+        "node_nm": "부산 2호선",
+        "st_nm": "국제금융센터·부산은행",
+        "coords": {
+          "lat": "35.1459205441501",
+          "lon": "129.066743786541"
+        },
+        "external_id": "PSS217"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "장산",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40239",
+        "node_nm": "부산 2호선",
+        "st_nm": "장산",
+        "coords": {
+          "lat": "35.1699558313015",
+          "lon": "129.177022545045"
+        },
+        "external_id": "PSS201"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "덕하",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40620",
+        "node_nm": "동해선",
+        "st_nm": "덕하",
+        "coords": {
+          "lat": "35.4940157803806",
+          "lon": "129.303090637139"
+        },
+        "external_id": "PSS11M253"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "거제",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "403",
+        "st_id": "40302",
+        "node_nm": "부산 3호선",
+        "st_nm": "거제",
+        "coords": {
+          "lat": "35.18848999628461",
+          "lon": "129.0740928144452"
+        },
+        "external_id": "PSS306"
+      },
+      {
+        "node_id": "406",
+        "st_id": "40603",
+        "node_nm": "동해선",
+        "st_nm": "거제",
+        "coords": {
+          "lat": "35.1895729323858",
+          "lon": "129.07431793647768"
+        },
+        "external_id": "PSS11M146"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "거제해맞이",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "406",
+        "st_id": "40602",
+        "node_nm": "동해선",
+        "st_nm": "거제해맞이",
+        "coords": {
+          "lat": "35.1812073659835",
+          "lon": "129.069006857993"
+        },
+        "external_id": "PSS11M145"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "대사",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40509",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "대사",
+        "coords": {
+          "lat": "35.2176967415322",
+          "lon": "128.938390945621"
+        },
+        "external_id": "PSS1009"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "모덕",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40211",
+        "node_nm": "부산 2호선",
+        "st_nm": "모덕",
+        "coords": {
+          "lat": "35.1804122918444",
+          "lon": "128.985603131583"
+        },
+        "external_id": "PSS229"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "양정",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40121",
+        "node_nm": "부산 1호선",
+        "st_nm": "양정",
+        "coords": {
+          "lat": "35.1727945202073",
+          "lon": "129.071093977334"
+        },
+        "external_id": "PSS121"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "박물관",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40518",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "박물관",
+        "coords": {
+          "lat": "35.2400585220082",
+          "lon": "128.871887125462"
+        },
+        "external_id": "PSS1018"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "서면",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40119",
+        "node_nm": "부산 1호선",
+        "st_nm": "서면",
+        "coords": {
+          "lat": "35.157939062512",
+          "lon": "129.059300883545"
+        },
+        "external_id": "PSS119"
+      },
+      {
+        "node_id": "402",
+        "st_id": "40242",
+        "node_nm": "부산 2호선",
+        "st_nm": "서면",
+        "coords": {
+          "lat": "35.157645977096",
+          "lon": "129.058305923709"
+        },
+        "external_id": "PSS219"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "동대신",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40108",
+        "node_nm": "부산 1호선",
+        "st_nm": "동대신",
+        "coords": {
+          "lat": "35.11032054771603",
+          "lon": "129.0177333285286"
+        },
+        "external_id": "PSS108"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "부암",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40220",
+        "node_nm": "부산 2호선",
+        "st_nm": "부암",
+        "coords": {
+          "lat": "35.157364020045065",
+          "lon": "129.0501711324292"
+        },
+        "external_id": "PSS220"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "모라",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40210",
+        "node_nm": "부산 2호선",
+        "st_nm": "모라",
+        "coords": {
+          "lat": "35.1895447446342",
+          "lon": "128.988569733613"
+        },
+        "external_id": "PSS230"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "당리",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40103",
+        "node_nm": "부산 1호선",
+        "st_nm": "당리",
+        "coords": {
+          "lat": "35.1035668582463",
+          "lon": "128.973696685691"
+        },
+        "external_id": "PSS103"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "낫개",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40137",
+        "node_nm": "부산 1호선",
+        "st_nm": "낫개",
+        "coords": {
+          "lat": "35.065334914564",
+          "lon": "128.979663395342"
+        },
+        "external_id": "PSS1M162"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "동래",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40125",
+        "node_nm": "부산 1호선",
+        "st_nm": "동래",
+        "coords": {
+          "lat": "35.20561606540984",
+          "lon": "129.0784743842795"
+        },
+        "external_id": "PSS125"
+      },
+      {
+        "node_id": "404",
+        "st_id": "40404",
+        "node_nm": "부산 4호선",
+        "st_nm": "동래",
+        "coords": {
+          "lat": "35.20470939785963",
+          "lon": "129.07732589369465"
+        },
+        "external_id": "PSS402"
+      },
+      {
+        "node_id": "406",
+        "st_id": "40605",
+        "node_nm": "동해선",
+        "st_nm": "동래",
+        "coords": {
+          "lat": "35.19719603428058",
+          "lon": "129.09132502631957"
+        },
+        "external_id": "PSS11M148"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "금곡",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40202",
+        "node_nm": "부산 2호선",
+        "st_nm": "금곡",
+        "coords": {
+          "lat": "35.2672407272281",
+          "lon": "129.016807358278"
+        },
+        "external_id": "PSS238"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "범어사",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40133",
+        "node_nm": "부산 1호선",
+        "st_nm": "범어사",
+        "coords": {
+          "lat": "35.27306328395934",
+          "lon": "129.09264111025075"
+        },
+        "external_id": "PSS133"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "명장",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "404",
+        "st_id": "40406",
+        "node_nm": "부산 4호선",
+        "st_nm": "명장",
+        "coords": {
+          "lat": "35.20540841852537",
+          "lon": "129.1018738053871"
+        },
+        "external_id": "PSS406"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "연산",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40123",
+        "node_nm": "부산 1호선",
+        "st_nm": "연산",
+        "coords": {
+          "lat": "35.1860379097119",
+          "lon": "129.081603364757"
+        },
+        "external_id": "PSS123"
+      },
+      {
+        "node_id": "403",
+        "st_id": "40320",
+        "node_nm": "부산 3호선",
+        "st_nm": "연산",
+        "coords": {
+          "lat": "35.1856776424777",
+          "lon": "129.082011289361"
+        },
+        "external_id": "PSS305"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "초량",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40114",
+        "node_nm": "부산 1호선",
+        "st_nm": "초량",
+        "coords": {
+          "lat": "35.1205304214806",
+          "lon": "129.042661154399"
+        },
+        "external_id": "PSS114"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "인제대",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40513",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "인제대",
+        "coords": {
+          "lat": "35.228130760436",
+          "lon": "128.901688578174"
+        },
+        "external_id": "PSS1013"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "불암",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40510",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "불암",
+        "coords": {
+          "lat": "35.222144212820545",
+          "lon": "128.92783103353437"
+        },
+        "external_id": "PSS1010"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "문현",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40224",
+        "node_nm": "부산 2호선",
+        "st_nm": "문현",
+        "coords": {
+          "lat": "35.1390425736004",
+          "lon": "129.067394840249"
+        },
+        "external_id": "PSS216"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "주례",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40215",
+        "node_nm": "부산 2호선",
+        "st_nm": "주례",
+        "coords": {
+          "lat": "35.1504864668448",
+          "lon": "129.002874383901"
+        },
+        "external_id": "PSS225"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "김해대학",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40512",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "김해대학",
+        "coords": {
+          "lat": "35.22899663473",
+          "lon": "128.915582461774"
+        },
+        "external_id": "PSS1012"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "숙등",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "403",
+        "st_id": "40314",
+        "node_nm": "부산 3호선",
+        "st_nm": "숙등",
+        "coords": {
+          "lat": "35.2120778435626",
+          "lon": "129.013192843436"
+        },
+        "external_id": "PSS312"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "감전",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40214",
+        "node_nm": "부산 2호선",
+        "st_nm": "감전",
+        "coords": {
+          "lat": "35.1553461063375",
+          "lon": "128.99147643385"
+        },
+        "external_id": "PSS226"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "윗반송",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "404",
+        "st_id": "40405",
+        "node_nm": "부산 4호선",
+        "st_nm": "윗반송",
+        "coords": {
+          "lat": "35.2323946024307",
+          "lon": "129.15375363540113"
+        },
+        "external_id": "PSS412"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "남천",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40229",
+        "node_nm": "부산 2호선",
+        "st_nm": "남천",
+        "coords": {
+          "lat": "35.1420150673392",
+          "lon": "129.107838322896"
+        },
+        "external_id": "PSS211"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "자갈치",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40110",
+        "node_nm": "부산 1호선",
+        "st_nm": "자갈치",
+        "coords": {
+          "lat": "35.097195508119285",
+          "lon": "129.0260699211048"
+        },
+        "external_id": "PSS110"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "수정",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40206",
+        "node_nm": "부산 2호선",
+        "st_nm": "수정",
+        "coords": {
+          "lat": "35.2231832264448",
+          "lon": "129.009105154949"
+        },
+        "external_id": "PSS234"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "대연",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40227",
+        "node_nm": "부산 2호선",
+        "st_nm": "대연",
+        "coords": {
+          "lat": "35.1351251955716",
+          "lon": "129.092118524312"
+        },
+        "external_id": "PSS213"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "대티",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40106",
+        "node_nm": "부산 1호선",
+        "st_nm": "대티",
+        "coords": {
+          "lat": "35.1031581926258",
+          "lon": "128.999943470572"
+        },
+        "external_id": "PSS106"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "장전",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40129",
+        "node_nm": "부산 1호선",
+        "st_nm": "장전",
+        "coords": {
+          "lat": "35.23807481304964",
+          "lon": "129.08814333961908"
+        },
+        "external_id": "PSS129"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "김해시청",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40514",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "김해시청",
+        "coords": {
+          "lat": "35.2271218680623",
+          "lon": "128.890387960522"
+        },
+        "external_id": "PSS1014"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "지내",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "405",
+        "st_id": "40511",
+        "node_nm": "부산-김해 경전철",
+        "st_nm": "지내",
+        "coords": {
+          "lat": "35.2274754567937",
+          "lon": "128.923761776687"
+        },
+        "external_id": "PSS1011"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "영산대",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "404",
+        "st_id": "40413",
+        "node_nm": "부산 4호선",
+        "st_nm": "영산대",
+        "coords": {
+          "lat": "35.22559607721028",
+          "lon": "129.14611605582886"
+        },
+        "external_id": "PSS411"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "경성대·부경대",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40228",
+        "node_nm": "부산 2호선",
+        "st_nm": "경성대·부경대",
+        "coords": {
+          "lat": "35.1376003833537",
+          "lon": "129.100519243797"
+        },
+        "external_id": "PSS212"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "중동",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40238",
+        "node_nm": "부산 2호선",
+        "st_nm": "중동",
+        "coords": {
+          "lat": "35.1666833502971",
+          "lon": "129.16876188899343"
+        },
+        "external_id": "PSS202"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "수영",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40232",
+        "node_nm": "부산 2호선",
+        "st_nm": "수영",
+        "coords": {
+          "lat": "35.165680361287",
+          "lon": "129.114809550972"
+        },
+        "external_id": "PSS208"
+      },
+      {
+        "node_id": "403",
+        "st_id": "40318",
+        "node_nm": "부산 3호선",
+        "st_nm": "수영",
+        "coords": {
+          "lat": "35.1675972187365",
+          "lon": "129.114854809464"
+        },
+        "external_id": "PSS301"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "덕천",
+    "is_transfer": true,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40207",
+        "node_nm": "부산 2호선",
+        "st_nm": "덕천",
+        "coords": {
+          "lat": "35.21043497676997",
+          "lon": "129.00517555617895"
+        },
+        "external_id": "PSS233"
+      },
+      {
+        "node_id": "403",
+        "st_id": "40319",
+        "node_nm": "부산 3호선",
+        "st_nm": "덕천",
+        "coords": {
+          "lat": "35.2102966262274",
+          "lon": "129.006060030657"
+        },
+        "external_id": "PSS313"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "신평",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "401",
+        "st_id": "40101",
+        "node_nm": "부산 1호선",
+        "st_nm": "신평",
+        "coords": {
+          "lat": "35.0952286648109",
+          "lon": "128.960618556493"
+        },
+        "external_id": "PSS101"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  },
+  {
+    "st_nm": "동의대",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "402",
+        "st_id": "40218",
+        "node_nm": "부산 2호선",
+        "st_nm": "동의대",
+        "coords": {
+          "lat": "35.1540609901883",
+          "lon": "129.032596868027"
+        },
+        "external_id": "PSS222"
+      }
+    ],
+    "region": "busan",
+    "reg_dt": "20250805112636",
+    "up_dt": "20250805112636"
+  }
+]

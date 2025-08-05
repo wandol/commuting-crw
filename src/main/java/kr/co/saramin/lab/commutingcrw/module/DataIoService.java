@@ -2,18 +2,19 @@ package kr.co.saramin.lab.commutingcrw.module;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 import kr.co.saramin.lab.commutingcrw.vo.CommutingAllData;
 import kr.co.saramin.lab.commutingcrw.vo.Subway;
 import kr.co.saramin.lab.commutingcrw.vo.SubwayVo;
+import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
+import java.io.*;
+import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -31,7 +32,10 @@ import java.util.stream.Stream;
  */
 @Slf4j
 @Component
+@AllArgsConstructor
 class DataIoService {
+
+    private final DataIndexer esIndexer;
 
     private static final String RAW_DIR = "raw";
     private static final String ROUTES_DIR = "raw/routes";
@@ -228,5 +232,53 @@ class DataIoService {
             log.error("파일 읽기 실패: file={}, error={}", filePath, e.getMessage());
             return null;
         }
+    }
+
+    /**
+     *  폴더의 파일 개수 반환 json
+     */
+    public int countJsonFiles(String folderPath) {
+        File folder = new File(folderPath);
+        if (!folder.exists() || !folder.isDirectory()) return 0;
+        File[] files = folder.listFiles((dir, name) -> name.toLowerCase().endsWith(".json"));
+        return files != null ? files.length : 0;
+    }
+
+    /**
+     *  파일안의 통근 json 체크.
+     */
+    public void validateCommutingJsonPath(String folderPath) {
+        File folder = new File(folderPath);
+        if (!folder.exists() || !folder.isDirectory()) return;
+        File[] files = folder.listFiles((dir, name) -> name.toLowerCase().endsWith(".json"));
+        if (files == null || files.length == 0) return;
+
+        Gson gson = new Gson();
+        int mismatchCount = 0;
+
+        for (File file : files) {
+            try (FileReader reader = new FileReader(file)) {
+                Type listType = new TypeToken<List<CommutingAllData>>(){}.getType();
+                List<CommutingAllData> dataList = gson.fromJson(reader, listType);
+
+                for (int i = 0; i < dataList.size(); i++) {
+                    CommutingAllData data = dataList.get(i);
+                    int pathSize = (data.getPath() != null) ? data.getPath().size() : 0;
+                    int stIdSize = (data.getPath_st_ids() != null) ? data.getPath_st_ids().size() : 0;
+
+                    if (pathSize != stIdSize) {
+                        mismatchCount++;
+                        log.error("❗ 불일치 - 파일: {} | 인덱스: #{} | path: {}개, path_st_ids: {}개", file.getName(), i, pathSize, stIdSize);
+                    }
+                }
+                if(mismatchCount == 0) {
+                    esIndexer.indexFolder(dataList, file.getName());
+                }
+            } catch (Exception e) {
+                log.error("파일 읽기 오류: {} - {}", file.getName(), e.getMessage());
+            }
+        }
+
+        log.info("검사 완료: 총 불일치 파일 수 = {}", mismatchCount);
     }
 }

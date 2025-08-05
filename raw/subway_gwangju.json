@@ -1,0 +1,402 @@
+[
+  {
+    "st_nm": "금남로4가",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60106",
+        "node_nm": "광주 1호선",
+        "st_nm": "금남로4가",
+        "coords": {
+          "lat": "35.150725420206",
+          "lon": "126.914526339474"
+        },
+        "external_id": "KJS310300"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "송정공원",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60116",
+        "node_nm": "광주 1호선",
+        "st_nm": "송정공원",
+        "coords": {
+          "lat": "35.14354984173234",
+          "lon": "126.79936687021848"
+        },
+        "external_id": "KJS330500"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "쌍촌",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60112",
+        "node_nm": "광주 1호선",
+        "st_nm": "쌍촌",
+        "coords": {
+          "lat": "35.15159570722761",
+          "lon": "126.86953837305741"
+        },
+        "external_id": "KJS330250"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "소태",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60102",
+        "node_nm": "광주 1호선",
+        "st_nm": "소태",
+        "coords": {
+          "lat": "35.1233388911729",
+          "lon": "126.932411042605"
+        },
+        "external_id": "KJS310100"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "문화전당",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60122",
+        "node_nm": "광주 1호선",
+        "st_nm": "문화전당",
+        "coords": {
+          "lat": "35.1465972550305",
+          "lon": "126.919903490043"
+        },
+        "external_id": "KJS310250"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "광주송정",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60117",
+        "node_nm": "광주 1호선",
+        "st_nm": "광주송정",
+        "coords": {
+          "lat": "35.13749210013527",
+          "lon": "126.7915362644601"
+        },
+        "external_id": "KJS330550"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "평동",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60115",
+        "node_nm": "광주 1호선",
+        "st_nm": "평동",
+        "coords": {
+          "lat": "35.1247287298032",
+          "lon": "126.769582969722"
+        },
+        "external_id": "KJS330650"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "상무",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60114",
+        "node_nm": "광주 1호선",
+        "st_nm": "상무",
+        "coords": {
+          "lat": "35.1466624736265",
+          "lon": "126.848542149637"
+        },
+        "external_id": "KJS330350"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "금남로5가",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60107",
+        "node_nm": "광주 1호선",
+        "st_nm": "금남로5가",
+        "coords": {
+          "lat": "35.15419277418956",
+          "lon": "126.90931949178001"
+        },
+        "external_id": "KJS310350"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "공항",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60121",
+        "node_nm": "광주 1호선",
+        "st_nm": "공항",
+        "coords": {
+          "lat": "35.14407609242912",
+          "lon": "126.81163183518822"
+        },
+        "external_id": "KJS330450"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "운천",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60118",
+        "node_nm": "광주 1호선",
+        "st_nm": "운천",
+        "coords": {
+          "lat": "35.150482087694016",
+          "lon": "126.85869740297962"
+        },
+        "external_id": "KJS330300"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "돌고개",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60109",
+        "node_nm": "광주 1호선",
+        "st_nm": "돌고개",
+        "coords": {
+          "lat": "35.151662750226315",
+          "lon": "126.89493020259164"
+        },
+        "external_id": "KJS330100"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "김대중컨벤션센터",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60119",
+        "node_nm": "광주 1호선",
+        "st_nm": "김대중컨벤션센터",
+        "coords": {
+          "lat": "35.1432572303967",
+          "lon": "126.841569332512"
+        },
+        "external_id": "KJS330400"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "농성",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60110",
+        "node_nm": "광주 1호선",
+        "st_nm": "농성",
+        "coords": {
+          "lat": "35.15328307708562",
+          "lon": "126.88372612030611"
+        },
+        "external_id": "KJS330150"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "학동·증심사입구",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60103",
+        "node_nm": "광주 1호선",
+        "st_nm": "학동·증심사입구",
+        "coords": {
+          "lat": "35.1327288057728",
+          "lon": "126.928405063266"
+        },
+        "external_id": "KJS310150"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "녹동",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60101",
+        "node_nm": "광주 1호선",
+        "st_nm": "녹동",
+        "coords": {
+          "lat": "35.106787076597",
+          "lon": "126.93399541177"
+        },
+        "external_id": "KJS310050"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "도산",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60120",
+        "node_nm": "광주 1호선",
+        "st_nm": "도산",
+        "coords": {
+          "lat": "35.131776733914876",
+          "lon": "126.78799483393821"
+        },
+        "external_id": "KJS330600"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "화정",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60111",
+        "node_nm": "광주 1호선",
+        "st_nm": "화정",
+        "coords": {
+          "lat": "35.1519654749892",
+          "lon": "126.876623011302"
+        },
+        "external_id": "KJS330200"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "양동시장",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60108",
+        "node_nm": "광주 1호선",
+        "st_nm": "양동시장",
+        "coords": {
+          "lat": "35.1543243970299",
+          "lon": "126.901277990948"
+        },
+        "external_id": "KJS330050"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  },
+  {
+    "st_nm": "남광주",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "601",
+        "st_id": "60104",
+        "node_nm": "광주 1호선",
+        "st_nm": "남광주",
+        "coords": {
+          "lat": "35.1393018227168",
+          "lon": "126.922978672689"
+        },
+        "external_id": "KJS310200"
+      }
+    ],
+    "region": "gwangju",
+    "reg_dt": "20250805112643",
+    "up_dt": "20250805112643"
+  }
+]

@@ -1,0 +1,442 @@
+[
+  {
+    "st_nm": "서대전네거리",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80103",
+        "node_nm": "대전 1호선",
+        "st_nm": "서대전네거리",
+        "coords": {
+          "lat": "36.32242246757099",
+          "lon": "127.41257645927034"
+        },
+        "external_id": "DJS107"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "지족(침신대)",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80114",
+        "node_nm": "대전 1호선",
+        "st_nm": "지족(침신대)",
+        "coords": {
+          "lat": "36.3841073391355",
+          "lon": "127.319497778302"
+        },
+        "external_id": "DJS121"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "오룡",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80106",
+        "node_nm": "대전 1호선",
+        "st_nm": "오룡",
+        "coords": {
+          "lat": "36.3286893013728",
+          "lon": "127.40492144995"
+        },
+        "external_id": "DJS108"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "월드컵경기장",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80116",
+        "node_nm": "대전 1호선",
+        "st_nm": "월드컵경기장",
+        "coords": {
+          "lat": "36.366863297514",
+          "lon": "127.317844996337"
+        },
+        "external_id": "DJS119"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "시청",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80104",
+        "node_nm": "대전 1호선",
+        "st_nm": "시청",
+        "coords": {
+          "lat": "36.3515240038326",
+          "lon": "127.386751407456"
+        },
+        "external_id": "DJS111"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "월평",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80121",
+        "node_nm": "대전 1호선",
+        "st_nm": "월평",
+        "coords": {
+          "lat": "36.3582587338705",
+          "lon": "127.364599812571"
+        },
+        "external_id": "DJS114"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "대동",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80101",
+        "node_nm": "대전 1호선",
+        "st_nm": "대동",
+        "coords": {
+          "lat": "36.3295857807756",
+          "lon": "127.442837712837"
+        },
+        "external_id": "DJS103"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "대전역",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80102",
+        "node_nm": "대전 1호선",
+        "st_nm": "대전역",
+        "coords": {
+          "lat": "36.331529158829255",
+          "lon": "127.43287717700683"
+        },
+        "external_id": "DJS104"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "반석",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80113",
+        "node_nm": "대전 1호선",
+        "st_nm": "반석",
+        "coords": {
+          "lat": "36.392180531687046",
+          "lon": "127.31455508683969"
+        },
+        "external_id": "DJS122"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "갈마",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80122",
+        "node_nm": "대전 1호선",
+        "st_nm": "갈마",
+        "coords": {
+          "lat": "36.3575809907703",
+          "lon": "127.372796710623"
+        },
+        "external_id": "DJS113"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "현충원",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80117",
+        "node_nm": "대전 1호선",
+        "st_nm": "현충원",
+        "coords": {
+          "lat": "36.3590845904517",
+          "lon": "127.3217976064"
+        },
+        "external_id": "DJS118"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "유성온천",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80119",
+        "node_nm": "대전 1호선",
+        "st_nm": "유성온천",
+        "coords": {
+          "lat": "36.3537203343187",
+          "lon": "127.341445807064"
+        },
+        "external_id": "DJS116"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "용문",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80107",
+        "node_nm": "대전 1호선",
+        "st_nm": "용문",
+        "coords": {
+          "lat": "36.33816667133553",
+          "lon": "127.39341085383948"
+        },
+        "external_id": "DJS109"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "중구청",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80109",
+        "node_nm": "대전 1호선",
+        "st_nm": "중구청",
+        "coords": {
+          "lat": "36.3248034278274",
+          "lon": "127.419552786885"
+        },
+        "external_id": "DJS106"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "구암",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80118",
+        "node_nm": "대전 1호선",
+        "st_nm": "구암",
+        "coords": {
+          "lat": "36.356695510518",
+          "lon": "127.330731986244"
+        },
+        "external_id": "DJS117"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "신흥",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80105",
+        "node_nm": "대전 1호선",
+        "st_nm": "신흥",
+        "coords": {
+          "lat": "36.3196578116318",
+          "lon": "127.448799412933"
+        },
+        "external_id": "DJS102"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "갑천",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80120",
+        "node_nm": "대전 1호선",
+        "st_nm": "갑천",
+        "coords": {
+          "lat": "36.3547487461809",
+          "lon": "127.354690249086"
+        },
+        "external_id": "DJS115"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "노은",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80115",
+        "node_nm": "대전 1호선",
+        "st_nm": "노은",
+        "coords": {
+          "lat": "36.3741446787189",
+          "lon": "127.317883531845"
+        },
+        "external_id": "DJS120"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "판암",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80112",
+        "node_nm": "대전 1호선",
+        "st_nm": "판암",
+        "coords": {
+          "lat": "36.3169610007362",
+          "lon": "127.458427352399"
+        },
+        "external_id": "DJS101"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "정부청사",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80108",
+        "node_nm": "대전 1호선",
+        "st_nm": "정부청사",
+        "coords": {
+          "lat": "36.3574713520615",
+          "lon": "127.381268082318"
+        },
+        "external_id": "DJS112"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "탄방",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80111",
+        "node_nm": "대전 1호선",
+        "st_nm": "탄방",
+        "coords": {
+          "lat": "36.3455472425069",
+          "lon": "127.384569666381"
+        },
+        "external_id": "DJS110"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  },
+  {
+    "st_nm": "중앙로",
+    "is_transfer": false,
+    "info": [
+      {
+        "node_id": "801",
+        "st_id": "80110",
+        "node_nm": "대전 1호선",
+        "st_nm": "중앙로",
+        "coords": {
+          "lat": "36.32866530912132",
+          "lon": "127.4258281669503"
+        },
+        "external_id": "DJS105"
+      }
+    ],
+    "region": "daejeon",
+    "reg_dt": "20250805112640",
+    "up_dt": "20250805112640"
+  }
+]

@@ -1,8 +1,13 @@
 package kr.co.saramin.lab.commutingcrw.constant;
 
+import co.elastic.clients.elasticsearch.ElasticsearchClient;
+import co.elastic.clients.json.jackson.JacksonJsonpMapper;
+import co.elastic.clients.transport.rest_client.RestClientTransport;
+import org.apache.http.HttpHost;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.elasticsearch.client.RestClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
@@ -44,5 +49,19 @@ public class Config {
         requestFactory.setHttpClient(httpClient);
 
         return new RestTemplate(requestFactory);
+    }
+
+    @Bean
+    private static ElasticsearchClient initClient() {
+        RestClient restClient = RestClient.builder(
+                new HttpHost("localhost", 9200, "http")
+        ).build();
+
+        RestClientTransport transport = new RestClientTransport(
+                restClient,
+                new JacksonJsonpMapper()  // 여기 오류 발생 시 → jackson-databind 의존성 누락 여부 확인
+        );
+
+        return new ElasticsearchClient(transport);
     }
 }
